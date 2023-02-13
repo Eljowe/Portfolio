@@ -1,0 +1,26 @@
+{
+    "name": "backend",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "start": "node index.js",
+        "dev": "nodemon index.js",
+        "build:ui": "cd ../Client && rmdir /s /q build && npm run build && robocopy build ../backend/build /s && cd ../backend",
+        "deploy": "flyctl deploy",
+        "d": "npm run build:ui && npm run deploy",
+        "logs:prod": "fly logs"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "cors": "^2.8.5",
+        "dotenv": "^16.0.3",
+        "express": "^4.18.2",
+        "morgan": "^1.10.0",
+        "path": "^0.12.7"
+    },
+    "devDependencies": {
+        "nodemon": "^2.0.20"
+    }
+}
