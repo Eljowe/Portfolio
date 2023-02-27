@@ -20,7 +20,9 @@ const Home = ({ toggleTheme, theme, isScrolled }) => {
                 </div>
             </div>
             <About />
+            <div className='spacer layer1'></div>
             <Projects />
+            <div className='spacer layer2'></div>
             <Resume />
         </div>
     )

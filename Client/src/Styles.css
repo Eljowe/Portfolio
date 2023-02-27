@@ -200,7 +200,7 @@ ul {
 /* About section */
 
 #about {
-    padding: 60px 4vh 4vh 4vh;
+    padding: 70px 4vh 4vh 4vh;
     text-align: left;
     overflow: hidden;
     justify-content: center;
@@ -257,13 +257,37 @@ ul {
 
 /* Projects section */
 
+.spacer {
+    aspect-ratio: 960/300;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+#dark .layer1 {
+    background-image: url('./images/layer1.svg');
+}
+
+#dark .layer2 {
+    background-image: url('./images/layer2.svg');
+}
+
+#light .layer1 {
+    background-image: url('./images/layer1l.svg');
+}
+
+#light .layer2 {
+    background-image: url('./images/layer2l.svg');
+}
+
 #projects {
-    padding: 60px 4vh 4vh 4vh;
+    padding: 70px 4vh 4vh 4vh;
     text-align: left;
     overflow: hidden;
     justify-content: center;
     align-items: center;
-    box-shadow: -1px -1px 10px 0px rgba(0,0,0,0.88)
+    /*box-shadow: -1px -1px 10px 0px rgba(0,0,0,0.88) */
 }
 
 #dark #projects {
@@ -353,9 +377,9 @@ ul {
 /* Resume section */
 
 #resume {
-    padding: 60px 4vh 4vh 4vh;
+    padding: 70px 4vh 4vh 4vh;
     text-align: left;
-    box-shadow: -1px -1px 10px 0px rgba(0,0,0,0.88)
+    /*box-shadow: -1px -1px 10px 0px rgba(0,0,0,0.88)*/
 }
 
 #dark #resume {

@@ -6,7 +6,7 @@
     "scripts": {
         "start": "node index.js",
         "dev": "nodemon index.js",
-        "build:ui": "cd ../Client && rmdir /s /q build && npm run build && robocopy build ../backend/build /s && cd ../backend",
+        "build:ui": "cd ../Client && rmdir /s /q build && npm run build && robocopy build ../Backend/build /s && cd ../Backend",
         "deploy": "flyctl deploy",
         "d": "npm run build:ui && npm run deploy",
         "logs:prod": "fly logs"
