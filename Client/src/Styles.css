@@ -196,6 +196,9 @@ ul {
     animation-duration: 5s;
 }
 
+.HomeTitle {
+    padding-left: 6vh;
+}
 
 /* About section */
 
@@ -258,7 +261,7 @@ ul {
 /* Projects section */
 
 .spacer {
-    aspect-ratio: 960/200;
+    aspect-ratio: 960/100;
     width: 100%;
     background-repeat: no-repeat;
     background-position: center;

@@ -48,6 +48,7 @@ const Home3D = () => {
         camera.updateProjectionMatrix()
 
         const controls = new OrbitControls(camera, renderer.domElement)
+        controls.enabled = false
         controls.enablePan = false
         controls.enableZoom = false
         controls.autoRotate = true
