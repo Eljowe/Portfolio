@@ -647,11 +647,17 @@ ul {
 
     .Home3D {
         align-self: start;
+        pointer-events:none
     }
 
     .HomeTitle {
         align-self: end;
+        padding-left: 0;
     }
+
+    canvas{
+        overflow : scroll;
+       }
 
     /* About */
     #about {

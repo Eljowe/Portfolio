@@ -53,10 +53,9 @@ const Home3D = () => {
         controls.enableZoom = false
         controls.autoRotate = true
         controls.autoRotateSpeed = 2
-        scene.userData.controls = controls //this allowed continuing scrolling div when in render view
+        //scene.userData.controls = controls //this allowed continuing scrolling div when in render view
         controls.minDistance = 400 //50
         controls.maxDistance = 400 //400
-        controls.enableDamping = true
 
         camera.position.z = 5
 
