@@ -433,7 +433,7 @@ ul {
     margin-top: 0;
     padding-top: 0.5vh;
     margin-bottom: 1vh;
-    color: #415d80;
+    color: #22303f;
 }
 
 .educationlist, .skillsList {
@@ -508,11 +508,11 @@ ul {
 }
 
 #dark .documentation_subtitle {
-    color: rgb(93, 123, 255);
+    color: #3D5B71;
 }
 
 #light .documentation_subtitle {
-    color: rgb(45, 83, 255);
+    color: #3D5B71;
 }
 
 #light .code {
