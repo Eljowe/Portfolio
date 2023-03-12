@@ -63,7 +63,7 @@ def _next_observation(self):
         return np.stack([image] * 4, axis=-1)
     else:
         return np.stack(self.state_queue, axis=-1)`
-    
+
     const code3 = `def _next_observation(self):
     grid2 = np.zeros((4,4)) 
     parent = self._driver.find_element(By.XPATH, '/html/body/div[2]/div[2]/div[6]')
