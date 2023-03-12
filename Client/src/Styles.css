@@ -188,12 +188,12 @@ ul {
 
 #home canvas {
     animation-name: fade-in;
-    animation-duration: 5s;
+    animation-duration: 3s;
 }
 
 #home h1 {
     animation-name: fade-in;
-    animation-duration: 5s;
+    animation-duration: 3s;
 }
 
 .HomeTitle {
