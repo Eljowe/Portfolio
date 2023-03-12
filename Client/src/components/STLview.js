@@ -12,9 +12,9 @@ const STLview = ({ STL, position }) => {
         var scene = new THREE.Scene()
         const helper = new THREE.GridHelper( 1000, 40, 0x303030, 0x303030 )
         helper.position.y = -40
-        ///scene.add( helper )
+        //scene.add( helper )
 
-        var camera = new THREE.PerspectiveCamera( 35, 1.2, 1, 1000 )
+        var camera = new THREE.PerspectiveCamera( 35, 1, 1, 1000 )
         camera.position.set( 400, 170,10 )
         var renderer = new THREE.WebGLRenderer()
         renderer.outputEncoding = THREE.sRGBEncoding
@@ -38,7 +38,6 @@ const STLview = ({ STL, position }) => {
         dirLight.shadow.mapSize.set( 1024, 1024 )
         scene.add( dirLight )
 
-        console.log(window.innerWidth)
 
         if (window.innerWidth > 500) {
             renderer.setSize(0.4*window.innerHeight, 0.4*window.innerHeight)

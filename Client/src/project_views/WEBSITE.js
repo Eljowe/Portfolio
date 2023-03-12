@@ -37,9 +37,10 @@ const WEBSITE = ({ toggleTheme, theme, projectScrolled }) => {
                     I decided to try and modernize my design.
                 </p>
                 <p>
-                    The first version of the website consisted of multiple pages. After trying to go for a more minimalistic look, I converted the different pages into sections on a single page. There are, however, still a few pages as each project has its own.
-                    The home page now had four sections: landing section, about, projects, and resume.
+                    The first version of the website consisted of multiple pages. After trying to go for a more minimalistic look, I converted the different pages into sections on a single page. There were, however, still a few pages as each project had its own.
+                    The home page now had four sections: landing section, about, projects, and resume. This is the layout the website still uses for now.
                 </p>
+
                 <Backbutton />
             </div>
         </div>

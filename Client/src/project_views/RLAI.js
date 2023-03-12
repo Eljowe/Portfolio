@@ -34,6 +34,49 @@ class CustomEnv(gym.Env):
   def close (self):
     ...
       `
+    const code2 = `def _get_image(self):
+    game_board_element = self._driver.find_element(By.XPATH, "/html/body/div[2]/div[2]")
+    base64_png = game_board_element.screenshot_as_png
+    _img = base64_png
+    file_bytes = np.asarray(bytearray(base64_png), dtype=np.uint8)
+    decoded_image = cv2.imdecode(file_bytes, cv2.IMREAD_COLOR)
+    rect = game_board_element.rect
+    (x, y, w, h) = (int(rect['x']), int(rect['y']), int(rect['width']), int(rect['height']))
+    cropped_image = decoded_image[y:y+h, x:x+w]
+    Board = namedtuple('Board', ['x', 'y', 'w', 'h', 'screen'])
+    imageStream = io.BytesIO(base64_png)
+    #im = Image.open(imageStream)
+    #im.save('C:\Koodi\RL_AI\img.png')
+    board = Board(x, y, w, h, cropped_image)
+    return decoded_image
+    return np.array(
+        Image.open(BytesIO(base64.b64decode(_img)))
+    )
+
+def _next_observation(self):
+    image = cv2.cvtColor(self._get_image(), cv2.COLOR_BGR2GRAY)
+    image = cv2.resize(image, (self.screen_width, self.screen_height))
+    self.num_observation += 1
+    self.state_queue.append(image)
+
+    if len(self.state_queue) < 4:
+        return np.stack([image] * 4, axis=-1)
+    else:
+        return np.stack(self.state_queue, axis=-1)`
+    
+    const code3 = `def _next_observation(self):
+    grid2 = np.zeros((4,4)) 
+    parent = self._driver.find_element(By.XPATH, '/html/body/div[2]/div[2]/div[6]')
+    children = parent.find_elements(By.XPATH, "*")
+    for child in children:
+        try:
+            info = child.get_attribute("class")
+            grid2[int(info[28])-1][int(info[26])-1] = child.text
+        except:
+            pass
+
+    return grid2`
+
     return(
         <div>
             <ProjectsNavbar toggleTheme={toggleTheme} theme={theme} projectScrolled={projectScrolled}/>
@@ -83,7 +126,43 @@ class CustomEnv(gym.Env):
                         codeBlock
                     />
                 </div>
-                <p>I used the code snippet above as the layout where I added my own functions tailored to suit the game environment and Selenium browser running and observing the game</p>
+                <p>I used the code snippet above as the layout where I added my own functions tailored to suit the game environment and Selenium browser running and observing the game state.</p>
+                <p>
+                    There were two ways I could think of to observe the game: 1) taking a screenshot after every move 2) parsing the html source code for the game grid after every move.
+                    At first I implemented the screenshot-taking method where functions _get_image and _next_observation were defined as below.
+                </p>
+
+                <div className="code">
+                    <CodeBlock
+                        id="code"
+                        language='python'
+                        text={code2}
+                        showLineNumbers={true}
+                        theme={dracula}
+                        wrapLines={true}
+                        codeBlock
+                    />
+                </div>
+
+                <p>
+                The results were somewhat okay for the first try but the Selenium browser had an annoying "feature" where the screen flickers with each screenshot.
+                    I couldn't find any way to turn the flickering off, so instead I decided to try the second method.
+                </p>
+                <div className="code">
+                    <CodeBlock
+                        id="code"
+                        language='python'
+                        text={code3}
+                        showLineNumbers={true}
+                        theme={dracula}
+                        wrapLines={true}
+                        codeBlock
+                    />
+                </div>
+                <p>
+                    While the lines of code needed for this approach is significantly lower, the performance of the training process took noticeable hit.
+                    This, I think, must have been caused by the for-loop and the element-finding method. Taking a screenshot is much simpler process in the observation step, and as I understand it, the RL-algorithm used here isn't affected by the size of the observation grid (4x4 vs the screenshot size).
+                </p>
                 <h1 className="unfinished">To be continued...</h1>
                 <Backbutton />
             </div>
