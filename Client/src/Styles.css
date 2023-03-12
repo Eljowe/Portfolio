@@ -186,9 +186,13 @@ ul {
     font-weight: bold;
 }
 
+
+/*
+
 #home canvas {
     animation-name: fade-in;
-    animation-duration: 3s;
+    animation-duration: 3s; 
+
 }
 
 #home h1 {
@@ -196,9 +200,12 @@ ul {
     animation-duration: 3s;
 }
 
-.HomeTitle {
-    padding-left: 6vh;
+*/
+
+.HomeTitle{
+    text-align: right;
 }
+
 
 /* About section */
 
@@ -653,6 +660,7 @@ ul {
     .HomeTitle {
         align-self: end;
         padding-left: 0;
+        text-align: center;
     }
 
     canvas{

@@ -7,7 +7,7 @@ import { ThreeMFLoader } from 'three/examples/jsm/loaders/3MFLoader'
 
 
 // Home 3D object viewer window. Custom STL-files are supported. For now the object is a sphere
-const Home3D = () => {
+const Home3D = ({ theme }) => {
     const mountRef = useRef(null)
     useEffect(() => {
         var scene = new THREE.Scene()
@@ -17,9 +17,10 @@ const Home3D = () => {
 
         var camera = new THREE.PerspectiveCamera( 35, 1.2, 1, 1000 )
         camera.position.set( 400, 0,10 )
-
+        
 
         var renderer = new THREE.WebGLRenderer()
+        renderer.clear()
         renderer.outputEncoding = THREE.sRGBEncoding
         renderer.setClearColor( 0xffffff, 0)
         renderer.setPixelRatio( window.devicePixelRatio )
@@ -41,10 +42,11 @@ const Home3D = () => {
         dirLight.shadow.mapSize.set( 1024, 1024 )
         scene.add( dirLight )
 
-        renderer.setSize( 0.75*80*Math.log(window.innerWidth), 0.75*60*Math.log(window.innerWidth) )
+        renderer.setSize( 0.75*60*Math.log(window.innerWidth), 0.75*60*Math.log(window.innerWidth) )
+        mountRef.current.innerHTML = ''
         mountRef.current.appendChild( renderer.domElement )
 
-        camera.aspect =8/6
+        camera.aspect =6/6
         camera.updateProjectionMatrix()
 
         const controls = new OrbitControls(camera, renderer.domElement)
@@ -64,18 +66,29 @@ const Home3D = () => {
         function onWindowResize(){
             renderer.setPixelRatio( window.devicePixelRatio )
 
-            camera.aspect =8/6
+            camera.aspect =6/6
             camera.updateProjectionMatrix()
 
-            renderer.setSize(0.75*80*Math.log(window.innerWidth), 0.75*60*Math.log(window.innerWidth) )
+            renderer.setSize(0.75*60*Math.log(window.innerWidth), 0.75*60*Math.log(window.innerWidth) )
 
         }
 
+        var insidecolor = 0x000000
+        var linecolor = 0xFFFFFF
+    
+        if(theme !== 'dark') {
+            insidecolor = 0xFFFFFF
+            console.log('here')
+            linecolor = 0x000000
+
+        }
+
+ 
         const sphereg = new THREE.SphereGeometry( 100, 15, 17, 0, 2*Math.PI, 0, 5.7428 )
-        const sphereM = new THREE.MeshBasicMaterial(  { color: 0x000000, emissive: 0x072534, flatShading: true } )
+        const sphereM = new THREE.MeshBasicMaterial(  { color: insidecolor, emissive: 0x072534, flatShading: true } )
         const spheremesh = new THREE.Mesh( sphereg, sphereM )
 
-        const material = new THREE.MeshBasicMaterial( { color: 0xffffff , wireframe: true } )
+        const material = new THREE.MeshBasicMaterial( { color: linecolor , wireframe: true, wireframeLinewidth: 1.3 } )
         const sphere = new THREE.Mesh( sphereg, material )
         sphere.scale.set(1.1, 1.1, 1.1)
 
@@ -96,7 +109,7 @@ const Home3D = () => {
         }
 
         animate()
-    }, [])
+    }, [theme])
 
 
     return (

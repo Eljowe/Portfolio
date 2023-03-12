@@ -18,13 +18,13 @@ const Home = ({ toggleTheme, theme, isScrolled }) => {
 
     function titleAnimation() {
         var tl = gsap.timeline()
-        tl.from('.HomeTitle', { y: 60, duration: 1.5, ease: 'power4.out' })
+        tl.from('.HomeTitle', { y: 60, duration: 1.5, ease: 'power2.out', opacity: 0 })
         return tl
     }
 
     function sphereAnimation() {
         var tl = gsap.timeline()
-        tl.from('.Home3D', { y: -60, duration: 1.5, ease: 'power4.out' })
+        tl.from('.Home3D', { y: -60, duration: 1.5, ease: 'power2.out', opacity: 0 })
 
         return tl
     }
@@ -45,7 +45,7 @@ const Home = ({ toggleTheme, theme, isScrolled }) => {
                     <h1>Joel Wickström</h1>
                 </div>
                 <div className='Home3D'>
-                    <Sphere3D />
+                    <Sphere3D theme={theme}/>
                 </div>
             </div>
             <About />
