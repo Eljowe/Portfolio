@@ -78,7 +78,6 @@ const Home3D = ({ theme }) => {
     
         if(theme !== 'dark') {
             insidecolor = 0xFFFFFF
-            console.log('here')
             linecolor = 0x000000
 
         }

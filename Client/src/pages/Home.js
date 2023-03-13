@@ -31,7 +31,7 @@ const Home = ({ toggleTheme, theme, isScrolled }) => {
             scrub: 1,
             ease: "default.inOut"
         },
-        x: windowSize.current[0]/5,
+        x: windowSize.current[0]/2,
         y: 0,
         opacity: 0
     })
@@ -44,7 +44,7 @@ const Home = ({ toggleTheme, theme, isScrolled }) => {
             scrub: 1,
             ease: "default.inOut"
         },
-        x: -windowSize.current[0]/5,
+        x: -windowSize.current[0]/2,
         y: 0,
         opacity: 0
     })

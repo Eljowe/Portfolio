@@ -661,6 +661,7 @@ ul {
     /* Home */
     #home {
         padding: 8vh 0vh 4vh 0vh;
+        overflow-x: hidden;
     }
 
     .Home3D {
