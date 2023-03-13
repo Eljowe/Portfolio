@@ -11,9 +11,7 @@ import { CSSRulePlugin } from 'gsap/CSSRulePlugin'
 gsap.registerPlugin(ScrollTrigger)
 
 const Home = ({ toggleTheme, theme, isScrolled }) => {
-    const scrollRef = useRef(null)
     const windowSize = useRef([window.innerWidth, window.innerHeight])
-
     window.onload=pageLoaded
     let tl2 = gsap.timeline({ defaults: { ease: 'rough.inOut', duration: 1.5 } })
 
@@ -22,14 +20,8 @@ const Home = ({ toggleTheme, theme, isScrolled }) => {
         tl2.from('.HomeTitle', { x: -windowSize.current[0]/8, delay:0.15, duration: 1.5, ease: 'power4.inOut', opacity: 0 }).from('.Home3D', { x: windowSize.current[0]/8, delay:0.15 , duration: 1.5, ease: 'power4.inOut', opacity: 0 }, '-=1.5')
     }
 
-    var windowRatio = windowSize.current[0]/windowSize.current[1]
-
-    "trigger: ' .HomeTitle',"
-    "start:`-=${windowRatio*90}`,"
-    "end: `+=${windowRatio*120}`,"
-    "windowSize.current[0]/2"
-
     useEffect(() => {
+
         gsap.timeline().to('.Home3D', {
             scrollTrigger:{
                 trigger: '.pagecontainer',
@@ -37,7 +29,7 @@ const Home = ({ toggleTheme, theme, isScrolled }) => {
                 end: `+=600`,
                 scrub: true,
                 ease: 'default.inOut',
-                invalidateOnRefresh: true
+                //invalidateOnRefresh: true
             },
             x: windowSize.current[0]/8,
             y: 0,
@@ -54,8 +46,42 @@ const Home = ({ toggleTheme, theme, isScrolled }) => {
             x: -windowSize.current[0]/8,
             y: 0,
             opacity: 0,
+        }).fromTo('.Foreword', {
+            opacity: 0, x: 500 }, { opacity:1, x: 0,
+            scrollTrigger: {
+                trigger: '#home',
+                start: 'top top',
+                end: '+=80%',
+                scrub: true,
+                ease: 'power2.inOut',
+                markers: true,
+            }
+        }).fromTo('.Aboutmediv', {
+            opacity: 0, x: -500 }, { opacity:1, x: 0,
+            scrollTrigger: {
+                trigger: '#home',
+                start: 'top top',
+                end: '+=95%',
+                scrub: true,
+                ease: 'power2.inOut',
+                markers: true,
+            }
+        }).fromTo('.title', {
+            opacity: 0, x: -500 }, { opacity:1, x: 0,
+            scrollTrigger: {
+                trigger: '#home',
+                start: 'top top',
+                end: '+=80%',
+                scrub: true,
+                ease: 'power2.inOut',
+                //markers: true,
+            }
         })
+
+
     })
+
+
 
 
     return (

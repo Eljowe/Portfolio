@@ -5,7 +5,7 @@ const About = () => {
     return(
         <div id="about" >
             <div >
-                <h1 >Foreword</h1>
+                <h1 className='title'>Foreword</h1>
                 <div className='Foreword'>
                     <p>
                         This website was built and designed by me in its entirety. I am, however, not a graphic designer,
