@@ -95,7 +95,7 @@ const Home = ({ toggleTheme, theme, isScrolled }) => {
             scrollTrigger: {
                 trigger: '#projects',
                 start: 'top top',
-                end: '+=90%',
+                end: '+=50%',
                 scrub: true,
                 ease: 'power2.inOut',
                 //markers: true,
@@ -105,7 +105,7 @@ const Home = ({ toggleTheme, theme, isScrolled }) => {
             scrollTrigger: {
                 trigger: '#projects',
                 start: 'top top',
-                end: '+=90%',
+                end: '+=50%',
                 scrub: true,
                 ease: 'power2.inOut',
                 //markers: true,

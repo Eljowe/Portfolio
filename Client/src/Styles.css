@@ -116,6 +116,7 @@ h1 {
     top: 0;
     left: 0;
     background-color: none;
+    z-index: 5;
 }
 
 .NavbarScrolled {
@@ -124,7 +125,8 @@ h1 {
     align-items: center;
     width: 100%;
     position: fixed;
-    box-shadow: -1px -1px 10px 0px rgba(0,0,0,0.88)
+    box-shadow: -1px -1px 10px 0px rgba(0,0,0,0.88);
+    z-index: 5;
 }
 
 ul {
