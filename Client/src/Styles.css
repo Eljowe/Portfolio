@@ -173,6 +173,10 @@ ul {
     overflow: unset;
 }
 
+.NavbarScrolled *{
+    overflow: unset;
+}
+
 
 
 /* Home section */

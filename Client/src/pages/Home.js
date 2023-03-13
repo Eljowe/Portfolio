@@ -35,7 +35,8 @@ const Home = ({ toggleTheme, theme, isScrolled }) => {
             },
             x: windowSize.current[0]/2,
             y: 0,
-            opacity: 0
+            opacity: 0,
+            invalidateOnRefresh: true
         }).to(".HomeTitle", {
             scrollTrigger:{
                 trigger: " .HomeTitle", 
@@ -46,7 +47,8 @@ const Home = ({ toggleTheme, theme, isScrolled }) => {
             },
             x: -windowSize.current[0]/2,
             y: 0,
-            opacity: 0
+            opacity: 0,
+            invalidateOnRefresh: true
         })
     })
 
