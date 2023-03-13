@@ -70,6 +70,46 @@ const Home = ({ toggleTheme, theme, isScrolled }) => {
                 ease: 'power2.inOut',
                 //markers: true,
             }
+        }).fromTo('.ProjectList', {
+            opacity: 1, x: 500 }, { opacity:1, x: 0,
+            scrollTrigger: {
+                trigger: '#about',
+                start: 'top top',
+                end: '+=80%',
+                scrub: true,
+                ease: 'power2.inOut',
+                //markers: true,
+            }
+        }).fromTo('#projects h1', {
+            opacity: 1, x: -500 }, { opacity:1, x: 0,
+            scrollTrigger: {
+                trigger: '#about',
+                start: 'top top',
+                end: '+=80%',
+                scrub: true,
+                ease: 'power2.inOut',
+                //markers: true,
+            }
+        }).fromTo('#mainresume', {
+            opacity: 1, x: -500 }, { opacity:1, x: 0,
+            scrollTrigger: {
+                trigger: '#projects',
+                start: 'top top',
+                end: '+=90%',
+                scrub: true,
+                ease: 'power2.inOut',
+                //markers: true,
+            }
+        }).fromTo('#secondresume', {
+            opacity: 1, x: 500 }, { opacity:1, x: 0,
+            scrollTrigger: {
+                trigger: '#projects',
+                start: 'top top',
+                end: '+=90%',
+                scrub: true,
+                ease: 'power2.inOut',
+                //markers: true,
+            }
         })
 
 
