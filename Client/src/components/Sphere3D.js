@@ -17,7 +17,7 @@ const Home3D = ({ theme }) => {
 
         var camera = new THREE.PerspectiveCamera( 35, 1.2, 1, 1000 )
         camera.position.set( 400, 0,10 )
-        
+
 
         var renderer = new THREE.WebGLRenderer()
         renderer.clear()
@@ -75,14 +75,14 @@ const Home3D = ({ theme }) => {
 
         var insidecolor = 0x000000
         var linecolor = 0xFFFFFF
-    
+
         if(theme !== 'dark') {
             insidecolor = 0xFFFFFF
             linecolor = 0x000000
 
         }
 
- 
+
         const sphereg = new THREE.SphereGeometry( 100, 15, 17, 0, 2*Math.PI, 0, 5.7428 )
         const sphereM = new THREE.MeshBasicMaterial(  { color: insidecolor, emissive: 0x072534, flatShading: true } )
         const spheremesh = new THREE.Mesh( sphereg, sphereM )
