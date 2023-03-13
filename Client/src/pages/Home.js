@@ -25,27 +25,25 @@ const Home = ({ toggleTheme, theme, isScrolled }) => {
         gsap.timeline().to('.Home3D', {
             scrollTrigger:{
                 trigger: '.pagecontainer',
-                start:`+=50`,
-                end: `+=600`,
+                start:'+=50',
+                end: '+=600',
                 scrub: true,
-                ease: 'default.inOut',
+                ease: 'power2.inOut',
                 //invalidateOnRefresh: true
             },
-            y: 0,
             opacity: 0,
         }).to('.HomeTitle', {
             scrollTrigger:{
-                trigger: ' .pagecontainer',
-                start: `+=50`,
-                end: `+=600`,
+                trigger: '.pagecontainer',
+                start: '+=50',
+                end: '+=600',
                 scrub: true,
                 ease: 'power2.inOut',
                 invalidateOnRefresh: true
             },
-            y: 0,
             opacity: 0,
         }).fromTo('.Foreword', {
-            opacity: 0, x: 500 }, { opacity:1, x: 0,
+            opacity: 1, x: 500 }, { opacity:1, x: 0,
             scrollTrigger: {
                 trigger: '#home',
                 start: 'top top',
@@ -54,7 +52,7 @@ const Home = ({ toggleTheme, theme, isScrolled }) => {
                 ease: 'power2.inOut',
             }
         }).fromTo('.Aboutmediv', {
-            opacity: 0, x: -500 }, { opacity:1, x: 0,
+            opacity: 1, x: -500 }, { opacity:1, x: 0,
             scrollTrigger: {
                 trigger: '#home',
                 start: 'top top',
@@ -63,7 +61,7 @@ const Home = ({ toggleTheme, theme, isScrolled }) => {
                 ease: 'power2.inOut',
             }
         }).fromTo('.title', {
-            opacity: 0, x: -500 }, { opacity:1, x: 0,
+            opacity: 1, x: -500 }, { opacity:1, x: 0,
             scrollTrigger: {
                 trigger: '#home',
                 start: 'top top',

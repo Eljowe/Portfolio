@@ -84,7 +84,7 @@ const Home3D = ({ theme }) => {
 
 
         const sphereg = new THREE.SphereGeometry( 100, 15, 17, 0, 2*Math.PI, 0, 5.7428 )
-        const sphereM = new THREE.MeshBasicMaterial(  { color: insidecolor} )
+        const sphereM = new THREE.MeshBasicMaterial(  { color: insidecolor } )
         const spheremesh = new THREE.Mesh( sphereg, sphereM )
 
         const material = new THREE.MeshBasicMaterial( { color: linecolor , wireframe: true, wireframeLinewidth: 1.3 } )
