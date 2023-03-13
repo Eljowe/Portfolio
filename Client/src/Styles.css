@@ -547,6 +547,11 @@ ul {
     font-weight: lighter;
 }
 
+.code *{
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
 .STL_div {
     display: flex;
     justify-content: center;
@@ -754,8 +759,6 @@ ul {
     }
     
     .code{
-        overflow-x: auto;
-        overflow-y: hidden;
         width: 94vw;
         font-size: 2vh;
     }

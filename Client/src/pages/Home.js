@@ -31,7 +31,6 @@ const Home = ({ toggleTheme, theme, isScrolled }) => {
                 ease: 'default.inOut',
                 //invalidateOnRefresh: true
             },
-            x: windowSize.current[0]/8,
             y: 0,
             opacity: 0,
         }).to('.HomeTitle', {
@@ -43,7 +42,6 @@ const Home = ({ toggleTheme, theme, isScrolled }) => {
                 ease: 'power2.inOut',
                 invalidateOnRefresh: true
             },
-            x: -windowSize.current[0]/8,
             y: 0,
             opacity: 0,
         }).fromTo('.Foreword', {
@@ -54,7 +52,6 @@ const Home = ({ toggleTheme, theme, isScrolled }) => {
                 end: '+=80%',
                 scrub: true,
                 ease: 'power2.inOut',
-                markers: true,
             }
         }).fromTo('.Aboutmediv', {
             opacity: 0, x: -500 }, { opacity:1, x: 0,
@@ -64,7 +61,6 @@ const Home = ({ toggleTheme, theme, isScrolled }) => {
                 end: '+=95%',
                 scrub: true,
                 ease: 'power2.inOut',
-                markers: true,
             }
         }).fromTo('.title', {
             opacity: 0, x: -500 }, { opacity:1, x: 0,
