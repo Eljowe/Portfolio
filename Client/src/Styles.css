@@ -12,6 +12,8 @@
 * * * * * * { outline: 1px solid rgba(255, 255, 0); }
 */
 
+
+
 html {
     scroll-behavior: smooth;
   }
@@ -25,6 +27,7 @@ img {
     font-family: 'Red Hat Display', sans-serif;
     -webkit-hyphens: auto;
     hyphens: auto;
+    overflow-x: hidden;
 }
 
 body {
@@ -661,7 +664,6 @@ ul {
     /* Home */
     #home {
         padding: 8vh 0vh 4vh 0vh;
-        overflow-x: hidden;
     }
 
     .Home3D {
