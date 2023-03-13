@@ -38,6 +38,7 @@ body {
     background-size: cover;
     width:100%;
     height:100%;
+    overflow-x: hidden;
 }
 
 #dark::after {
@@ -204,6 +205,14 @@ ul {
 
 .HomeTitle{
     text-align: right;
+    position: absolute;
+    top: 45vh;
+    left: calc(50vw - 250px);
+}
+
+.Home3D {
+    position: absolute;
+    left: 50vw;
 }
 
 
@@ -641,6 +650,8 @@ ul {
 @media all and (max-width: 500px) {
 
     /* Navbar */
+    
+
 
     .NavItem {
         padding: 2vh 3vw;
@@ -649,19 +660,29 @@ ul {
 
     /* Home */
     #home {
-        padding: 8vh 4vh 4vh 4vh;
+        padding: 8vh 0vh 4vh 0vh;
     }
 
     .Home3D {
         align-self: start;
-        pointer-events:none
+        pointer-events:none;
+        top: 60vh;
+        left: 50%;
+        
+        transform: translate(-50%, -50%);
     }
 
     .HomeTitle {
         align-self: end;
+        width: 80vw;
         padding-left: 0;
         text-align: center;
+        top: 30vh;
+        left: 50vw;
+        transform: translate(-50%, -50%);
     }
+
+
 
     canvas{
         overflow : scroll;

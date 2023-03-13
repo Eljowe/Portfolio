@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useRef} from 'react'
 import Sphere3D from '../components/Sphere3D'
 import About from '../sections/About'
 import Projects from '../sections/Projects'
@@ -11,27 +11,43 @@ import { CSSRulePlugin } from 'gsap/CSSRulePlugin'
 gsap.registerPlugin(ScrollTrigger)
 
 const Home = ({ toggleTheme, theme, isScrolled }) => {
+    const windowSize = useRef([window.innerWidth, window.innerHeight]);
+    
     window.onload=pageLoaded
     let tl2 = gsap.timeline({ defaults: { ease: 'rough.inOut', duration: 1.5 } })
-    let flagpoles = CSSRulePlugin.getRule('.HomeTitle')
-
-
-    function titleAnimation() {
-        var tl = gsap.timeline()
-        tl.from('.HomeTitle', { y: 60, duration: 1.5, ease: 'power2.out', opacity: 0 })
-        return tl
-    }
-
-    function sphereAnimation() {
-        var tl = gsap.timeline()
-        tl.from('.Home3D', { y: -60, duration: 1.5, ease: 'power2.out', opacity: 0 })
-
-        return tl
-    }
+    
 
     function pageLoaded() {
-        tl2.add(titleAnimation()).add(sphereAnimation(), '-=1.5')
+        tl2.from('.HomeTitle', { y: 120, duration: 1.5, ease: 'power4.out', opacity: 0 }).from('.Home3D', { y: -120, duration: 1.5, ease: 'power4.out', opacity: 0 }, "-=1.5")
     }
+
+    var windowRatio = windowSize.current[0]/windowSize.current[1]
+
+    gsap.to(".Home3D", {
+        scrollTrigger:{
+            trigger: " .HomeTitle", 
+            start:`-=${windowRatio*90}`,
+            end: `+=${windowRatio*120}`,
+            scrub: 1,
+            ease: "default.inOut"
+        },
+        x: windowSize.current[0]/5,
+        y: 0,
+        opacity: 0
+    })
+
+    gsap.to(".HomeTitle", {
+        scrollTrigger:{
+            trigger: " .HomeTitle", 
+            start: `-=${windowRatio*90}`,
+            end: `+=${windowRatio*120}`,
+            scrub: 1,
+            ease: "default.inOut"
+        },
+        x: -windowSize.current[0]/5,
+        y: 0,
+        opacity: 0
+    })
 
 
 
