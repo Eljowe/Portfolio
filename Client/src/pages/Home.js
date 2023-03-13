@@ -31,12 +31,13 @@ const Home = ({ toggleTheme, theme, isScrolled }) => {
                 start:`-=${windowRatio*90}`,
                 end: `+=${windowRatio*120}`,
                 scrub: 1,
-                ease: "default.inOut"
+                ease: "default.inOut",
+                invalidateOnRefresh: true
             },
             x: windowSize.current[0]/2,
             y: 0,
             opacity: 0,
-            invalidateOnRefresh: true
+            
         }).to(".HomeTitle", {
             scrollTrigger:{
                 trigger: " .HomeTitle", 
@@ -48,7 +49,6 @@ const Home = ({ toggleTheme, theme, isScrolled }) => {
             x: -windowSize.current[0]/2,
             y: 0,
             opacity: 0,
-            invalidateOnRefresh: true
         })
     })
 
