@@ -17,7 +17,11 @@ const Home = ({ toggleTheme, theme, isScrolled }) => {
 
 
     function pageLoaded() {
-        tl2.from('.HomeTitle', { x: -windowSize.current[0]/8, delay:0.15, duration: 1.5, ease: 'power4.inOut', opacity: 0 }).from('.Home3D', { x: windowSize.current[0]/8, delay:0.15 , duration: 1.5, ease: 'power4.inOut', opacity: 0 }, '-=1.65')
+        tl2.from('.HomeTitle', { x: -windowSize.current[0]/8, delay:0.15, duration: 1.5, ease: 'power4.inOut', opacity: 0 })
+        .from('.Home3D', { x: windowSize.current[0]/8, delay:0.15 , duration: 1.5, ease: 'power4.inOut', opacity: 0 }, '-=1.65')
+        .from('.Navbar', { y: -80, delay:0.15 , duration: 1.5, ease: 'power4.inOut' }, '-=1.8')
+        
+    
     }
 
     useEffect(() => {
@@ -47,16 +51,17 @@ const Home = ({ toggleTheme, theme, isScrolled }) => {
             scrollTrigger: {
                 trigger: '#home',
                 start: 'top top',
-                end: '+=80%',
+                end: '+=70%',
                 scrub: true,
                 ease: 'power2.inOut',
+                //markers:true,
             }
         }).fromTo('.Aboutmediv', {
             opacity: 0, x: -500 }, { opacity:1, x: 0,
             scrollTrigger: {
                 trigger: '#home',
                 start: 'top top',
-                end: '+=95%',
+                end: '+=70%',
                 scrub: true,
                 ease: 'power2.inOut',
             }
@@ -65,7 +70,8 @@ const Home = ({ toggleTheme, theme, isScrolled }) => {
             scrollTrigger: {
                 trigger: '#home',
                 start: 'top top',
-                end: '+=80%',
+                end: '+=60%',
+                duration: 1.5,
                 scrub: true,
                 ease: 'power2.inOut',
                 //markers: true,
@@ -74,8 +80,8 @@ const Home = ({ toggleTheme, theme, isScrolled }) => {
             opacity: 0, x: 500 }, { opacity:1, x: 0,
             scrollTrigger: {
                 trigger: '#about',
-                start: 'top top',
-                end: '+=80%',
+                start: '+=20%',
+                end: '+=70%',
                 scrub: true,
                 ease: 'power2.inOut',
                 //markers: true,
@@ -84,8 +90,8 @@ const Home = ({ toggleTheme, theme, isScrolled }) => {
             opacity: 0, x: -500 }, { opacity:1, x: 0,
             scrollTrigger: {
                 trigger: '#about',
-                start: 'top top',
-                end: '+=80%',
+                start: '+=20%',
+                end: '+=70%',
                 scrub: true,
                 ease: 'power2.inOut',
                 //markers: true,
@@ -95,7 +101,7 @@ const Home = ({ toggleTheme, theme, isScrolled }) => {
             scrollTrigger: {
                 trigger: '#resume',
                 start: '-=800',
-                end: '+=50%',
+                end: '+=60%',
                 scrub: true,
                 ease: 'power2.inOut',
                 //markers: true,
@@ -105,14 +111,12 @@ const Home = ({ toggleTheme, theme, isScrolled }) => {
             scrollTrigger: {
                 trigger: '#resume',
                 start: '-=800',
-                end: '+=50%',
+                end: '+=60%',
                 scrub: true,
                 ease: 'power2.inOut',
                 //markers: true,
             }
         })
-
-
     })
 
 
