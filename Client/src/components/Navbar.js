@@ -23,7 +23,7 @@ const Navbar = ({ toggleTheme, theme, isScrolled }) => {
                 </ul>
             </nav>
             <ReactSwitch
-                onChange={toggleTheme} checked={theme === 'dark'}
+                onChange={toggleTheme} checked={theme !== 'light'}
                 id="material-switch"
                 onColor="#414141"
                 onHandleColor="#969696"

@@ -76,7 +76,7 @@ const Home3D = ({ theme }) => {
         var insidecolor = 0x000000
         var linecolor = 0xFFFFFF
 
-        if(theme !== 'dark') {
+        if(theme === 'light') {
             insidecolor = 0xFFFFFF
             linecolor = 0x000000
 
