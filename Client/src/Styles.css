@@ -357,6 +357,7 @@ ul {
 }
 
 .ProjectListItem {
+    overflow-y: hidden;
     display: inline-block;
     margin: 0 2vh 2vh 0;
     font-size: 2vh;

@@ -43,7 +43,7 @@ const Home = ({ toggleTheme, theme, isScrolled }) => {
             },
             opacity: 0,
         }).fromTo('.Foreword', {
-            opacity: 1, x: 500 }, { opacity:1, x: 0,
+            opacity: 0, x: 500 }, { opacity:1, x: 0,
             scrollTrigger: {
                 trigger: '#home',
                 start: 'top top',
@@ -52,7 +52,7 @@ const Home = ({ toggleTheme, theme, isScrolled }) => {
                 ease: 'power2.inOut',
             }
         }).fromTo('.Aboutmediv', {
-            opacity: 1, x: -500 }, { opacity:1, x: 0,
+            opacity: 0, x: -500 }, { opacity:1, x: 0,
             scrollTrigger: {
                 trigger: '#home',
                 start: 'top top',
@@ -61,7 +61,7 @@ const Home = ({ toggleTheme, theme, isScrolled }) => {
                 ease: 'power2.inOut',
             }
         }).fromTo('.title', {
-            opacity: 1, x: -500 }, { opacity:1, x: 0,
+            opacity: 0, x: -500 }, { opacity:1, x: 0,
             scrollTrigger: {
                 trigger: '#home',
                 start: 'top top',
@@ -71,7 +71,7 @@ const Home = ({ toggleTheme, theme, isScrolled }) => {
                 //markers: true,
             }
         }).fromTo('.ProjectList', {
-            opacity: 1, x: 500 }, { opacity:1, x: 0,
+            opacity: 0, x: 500 }, { opacity:1, x: 0,
             scrollTrigger: {
                 trigger: '#about',
                 start: 'top top',
@@ -81,7 +81,7 @@ const Home = ({ toggleTheme, theme, isScrolled }) => {
                 //markers: true,
             }
         }).fromTo('#projects h1', {
-            opacity: 1, x: -500 }, { opacity:1, x: 0,
+            opacity: 0, x: -500 }, { opacity:1, x: 0,
             scrollTrigger: {
                 trigger: '#about',
                 start: 'top top',
@@ -91,20 +91,20 @@ const Home = ({ toggleTheme, theme, isScrolled }) => {
                 //markers: true,
             }
         }).fromTo('#mainresume', {
-            opacity: 1, x: -500 }, { opacity:1, x: 0,
+            opacity: 0, x: -500 }, { opacity:1, x: 0,
             scrollTrigger: {
-                trigger: '#projects',
-                start: 'top top',
+                trigger: '#resume',
+                start: '-=800',
                 end: '+=50%',
                 scrub: true,
                 ease: 'power2.inOut',
                 //markers: true,
             }
         }).fromTo('#secondresume', {
-            opacity: 1, x: 500 }, { opacity:1, x: 0,
+            opacity: 0, x: 500 }, { opacity:1, x: 0,
             scrollTrigger: {
-                trigger: '#projects',
-                start: 'top top',
+                trigger: '#resume',
+                start: '-=800',
                 end: '+=50%',
                 scrub: true,
                 ease: 'power2.inOut',
