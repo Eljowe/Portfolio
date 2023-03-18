@@ -375,30 +375,32 @@ ul {
 }
 
 #portfolioitem {
-    background: url("./images/web.PNG");
-    background-size: contain;
+    background: url("./images/bg.jpg");
+    background-size:100%;
+    color: black;
+    font-weight: bold;
 }
 
 #filmitem {
     background: url("./images/FILM.jpg");
-    background-size: contain;
+    background-size: 100%;
 }
   
 #RLitem {
     background: url("./images/RLAI2.PNG");
-    background-size: contain;
+    background-size: 100%;
 }
 
 #caditem {
     background: url("./images/3D/3D.JPG");
-    background-size: contain;
+    background-size: 100%;
     color: black;
     font-weight: bold;
 }
 
 #kideitem {
     background: url("./images/KIDE/kide.PNG");
-    background-size: contain;
+    background-size: 100%;
 }
 
 .Iconsdiv {
@@ -409,6 +411,71 @@ ul {
     color: white;
     margin: 2vh 2vh 2vh 0;
 }
+
+/* Projects2 */
+
+#projects2 h1 {
+    padding: 6vh 4vh;
+    text-align: justify;
+    max-width: 110vh;
+    position: absolute;
+}
+
+.ProjectListItem2 {
+    height: 55vh;
+    width: auto;
+    object-fit: cover;
+    font-size: 2vh;
+
+    color: white;
+    border-radius: 3vh;
+    box-shadow: 1px 1px 10px 0px rgba(0,0,0,0.88);
+
+    font-size: 5vh;
+    word-break: keep-all;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 55vh;
+}
+
+#dark #projects2 {
+    background-color: #17382E;
+    color: white;
+}
+
+#light #projects2 {
+    background-color: #383B3F;
+    color: white;
+}
+
+
+
+#projects2 {
+    height: 100vh;
+  overflow-x: unset;
+  display: flex;
+  left: 0;
+  background: var(--text-color);
+  color: var(--bg-color);
+}
+
+#projects2 * {
+    overflow-x: unset;
+    text-decoration: none;
+}
+
+.ProjectList2 {
+    height: 100vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 50px 10vw;
+}
+
+.ProjectList2 > * {
+    min-width: 60vw;
+    padding: 0 5vw;
+  }
 
 /* Resume section */
 
@@ -734,6 +801,21 @@ ul {
         width: 37vw;
         max-width: unset;
         margin: 1vh;
+    }
+
+    .ProjectListItem2 {
+        height: 18.5vh;
+        line-height: 18.5vh;
+        width: auto;
+        object-fit: cover;
+        font-size: 2.5vh;
+    }
+
+    #projects2 h1 {
+        padding: 10vh 4vh;
+        text-align: justify;
+        max-width: 110vh;
+        position: absolute;
     }
 
     /* Resume */

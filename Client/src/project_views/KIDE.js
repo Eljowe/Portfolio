@@ -57,12 +57,12 @@ const KIDE = ({ toggleTheme, theme, projectScrolled }) => {
             <ProjectsNavbar toggleTheme={toggleTheme} theme={theme} projectScrolled={projectScrolled}/>
             <div className='projectdiv'>
                 <Backbutton />
-                <h3>Kide App ticket bot</h3>
+                <h3>Web automation: ticket bot</h3>
                 <p>
                     The tickets for student events are almost always sold on a third-party platform Kide App.
                     Some events sell out in seconds. Some events sell out instantly. I did this project to see if I could automate ticket buying
-                    with a bot of some sort myself, as I had seen other people doing it. Perhaps a somewhat unethical, but a good project to learn about web requests, APIs, JSON parsing,
-                    and web automation.
+                    with a bot of some sort myself, as I had seen other people doing it. Perhaps the goal of the project is somewhat unethical, but there is a lot learn about web requests, APIs, JSON parsing,
+                    and web automation overall.
                 </p>
                 <p>
                     The first step was to figure out how to control websites and APIs with requests.

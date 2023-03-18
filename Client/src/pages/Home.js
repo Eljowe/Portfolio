@@ -5,6 +5,7 @@ import Projects from '../sections/Projects'
 import Resume from '../sections/Resume'
 import Navbar from '../components/Navbar'
 import { gsap } from 'gsap'
+import Projects2 from '../sections/Projects2'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { CSSRulePlugin } from 'gsap/CSSRulePlugin'
 
@@ -136,7 +137,7 @@ const Home = ({ toggleTheme, theme, isScrolled }) => {
             </div>
             <About />
             <div className='spacer layer1'></div>
-            <Projects />
+            <Projects2/>
             <div className='spacer layer2'></div>
             <Resume />
         </div>
