@@ -415,7 +415,7 @@ ul {
 /* Projects2 */
 
 #projects2 h1 {
-    padding: 6vh 4vh;
+    padding: 8vh 4vh;
     text-align: justify;
     max-width: 110vh;
     position: absolute;
@@ -820,6 +820,7 @@ ul {
         text-align: justify;
         max-width: 110vh;
         position: absolute;
+        left: 0;
     }
 
     /* Resume */
