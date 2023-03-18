@@ -15,7 +15,7 @@ const Navbar = ({ toggleTheme, theme, isScrolled }) => {
                         <a className='NavItem' href="#about">About</a>
                     </li>
                     <li>
-                        <a className='NavItem' href="#projects">Projects</a>
+                        <a className='NavItem' href="#projects2">Projects</a>
                     </li>
                     <li>
                         <a className='NavItem' href="#resume">Resume</a>
