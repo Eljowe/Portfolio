@@ -526,7 +526,7 @@ ul {
     margin-top: 0;
     padding-top: 0.5vh;
     margin-bottom: 1vh;
-    color: #3e947a;
+    color: #656da7;
 }
 
 #light .subtitle {
@@ -684,7 +684,11 @@ ul {
     max-width: unset;
     justify-items: left;
     border-radius: 1vh;
-    box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.88);
+    /* box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.88); */
+}
+
+#light .backbutton {
+    font-weight:normal;
 }
 
 /* Not found page */
