@@ -10,23 +10,23 @@ const Projects2 = () => {
     const windowSize = useRef([window.innerWidth, window.innerHeight])
 
     useEffect(() => {
-        gsap.timeline().fromTo(".ProjectList2", {x: "+=0"}, {
+        gsap.timeline().fromTo('.ProjectList2', { x: '+=0' }, {
             scrollTrigger: {
                 scrub: true,
-                trigger: "#projects2",
+                trigger: '#projects2',
                 pin: true,
                 // anticipatePin: 1,
-                start: "top top",
+                start: 'top top',
                 end: `+=${windowSize.current[0]*0.6*4}`,
-              },
-              x: `${-(windowSize.current[0]*0.8)*0.6*5}`,
-              ease: "none"
+            },
+            x: `${-(windowSize.current[0]*0.8)*0.6*5}`,
+            ease: 'none'
         })
-        
-    }, []);
 
-    
-    
+    }, [])
+
+
+
 
     return(
         <div id="projects2" >

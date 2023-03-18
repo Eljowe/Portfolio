@@ -299,19 +299,19 @@ ul {
 }
 
 #dark .layer1 {
-    background-image: url('./images/layer1.svg');
+    background-image: url('./images/layer2_2D.svg');
 }
 
 #dark .layer2 {
-    background-image: url('./images/layer2.svg');
+    background-image: url('./images/layer1_2D.svg');
 }
 
 #light .layer1 {
-    background-image: url('./images/layer1l.svg');
+    background-image: url('./images/layer1_2L.svg');
 }
 
 #light .layer2 {
-    background-image: url('./images/layer2l.svg');
+    background-image: url('./images/layer2_2L.svg');
 }
 
 #projects {
@@ -439,12 +439,12 @@ ul {
 }
 
 #dark #projects2 {
-    background-color: #17382E;
+    background-color: #282A3A;
     color: white;
 }
 
 #light #projects2 {
-    background-color: #383B3F;
+    background-color: #324B4B;
     color: white;
 }
 
