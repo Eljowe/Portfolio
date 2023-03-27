@@ -8,11 +8,13 @@ import { gsap } from 'gsap'
 import Projects2 from '../sections/Projects2'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { CSSRulePlugin } from 'gsap/CSSRulePlugin'
+import useLocoScroll from '../helpers/locoScroll'
 
 gsap.registerPlugin(ScrollTrigger)
 
 const Home = ({ toggleTheme, theme, isScrolled }) => {
     const windowSize = useRef([window.innerWidth, window.innerHeight])
+
     window.onload=pageLoaded
     let tl2 = gsap.timeline({ defaults: { ease: 'rough.inOut', duration: 1.5 } })
 
@@ -24,6 +26,8 @@ const Home = ({ toggleTheme, theme, isScrolled }) => {
 
 
     }
+
+
 
     useEffect(() => {
 
