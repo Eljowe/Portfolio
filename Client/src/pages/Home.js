@@ -5,10 +5,11 @@ import Projects from '../sections/Projects'
 import Resume from '../sections/Resume'
 import Navbar from '../components/Navbar'
 import { gsap } from 'gsap'
-import Projects2 from '../sections/Projects2'
+import Projects3 from '../sections/Projects3'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { CSSRulePlugin } from 'gsap/CSSRulePlugin'
 import useLocoScroll from '../helpers/locoScroll'
+import ScrollToTop from '../helpers/ScrollToTop'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -28,9 +29,7 @@ const Home = ({ toggleTheme, theme, isScrolled }) => {
     }
 
 
-
     useEffect(() => {
-
         gsap.timeline().to('.Home3D', {
             scrollTrigger:{
                 trigger: '.pagecontainer',
@@ -85,8 +84,8 @@ const Home = ({ toggleTheme, theme, isScrolled }) => {
             opacity: 0, x: 500 }, { opacity:1, x: 0,
             scrollTrigger: {
                 trigger: '#about',
-                start: '+=20%',
-                end: '+=70%',
+                start: '+=0%',
+                end: '+=60%',
                 scrub: true,
                 ease: 'power2.inOut',
                 //markers: true,
@@ -95,8 +94,8 @@ const Home = ({ toggleTheme, theme, isScrolled }) => {
             opacity: 0, x: -500 }, { opacity:1, x: 0,
             scrollTrigger: {
                 trigger: '#about',
-                start: '+=20%',
-                end: '+=70%',
+                start: '+=0%',
+                end: '+=60%',
                 scrub: true,
                 ease: 'power2.inOut',
                 //markers: true,
@@ -141,11 +140,13 @@ const Home = ({ toggleTheme, theme, isScrolled }) => {
             </div>
             <About />
             <div className='spacer layer1'></div>
-            <Projects2/>
+            <Projects3/>
             <div className='spacer layer2'></div>
             <Resume />
         </div>
     )
 }
+//<div className='spacer layer1'></div>
+// <div className='spacer layer2'></div>
 
 export default Home

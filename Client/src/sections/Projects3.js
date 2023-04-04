@@ -1,0 +1,63 @@
+import ABOUT from '../project_views/ABOUT'
+import { BsGithub, BsLinkedin } from 'react-icons/bs'
+import { useState, useEffect } from 'react'
+import Carousel from 'react-multi-carousel'
+import 'react-multi-carousel/lib/styles.css'
+
+const Projects3 = () => {
+    const responsive = {
+        superLargeDesktop: {
+        // the naming can be any, depends on you.
+            breakpoint: { max: 4000, min: 3000 },
+            items: 5
+        },
+        desktop: {
+            breakpoint: { max: 3000, min: 900 },
+            items: 3
+        },
+        tablet: {
+            breakpoint: { max: 900, min: 464 },
+            items: 1
+        },
+        mobile: {
+            breakpoint: { max: 464, min: 0 },
+            items: 1
+        }
+    }
+
+    return(
+        <div id="projects">
+            <h1>Projects</h1>
+            <div className='ProjectList'>
+                <Carousel swipeable={true}
+                    draggable={true}
+                    showDots={true}
+                    responsive={responsive}
+                    ssr={true} // means to render carousel on server-side.
+                    infinite={true}
+                    autoPlaySpeed={1000}
+                    keyBoardControl={true}
+                    transitionDuration={500}
+                    containerClass="carousel-container"
+                    removeArrowOnDeviceType={["mobile"]}
+                    dotListClass="custom-dot-list-style"
+                    itemClass="carousel-item"
+                    //focusOnSelect={true}
+                >
+
+                    <a href="/portfolioproject"  ><div className='ProjectListItem3'><div className='projectPic' id="portfolioitem">Portfolio</div><div className='ProjectListItemText3'><p>How I built this website. What tools I used and why. What I learned.</p></div></div></a>
+                    <a href="/RL"  ><div className='ProjectListItem3'><div className='projectPic' id="RLitem">Reinforcement learning</div><div className='ProjectListItemText3'><p>Trying to use reinforcement learning to master a simple browser game.</p></div></div></a>
+                    <a href="/ticketbot"  ><div className='ProjectListItem3'><div className='projectPic' id="kideitem">Ticket bot</div><div className='ProjectListItemText3'><p>Practicing web automation and REST api usage by creating an automated ticket buying app.</p></div></div></a>
+                    <a href="/3dDesign"  ><div className='ProjectListItem3'><div className='projectPic' id="caditem">3D Design</div><div className='ProjectListItemText3'><p>Using 3D-designing tools like Solidworks to create random solutions to random problems.</p></div></div></a>
+                    <a href="/film"  ><div className='ProjectListItem3'><div className='projectPic' id="filmitem">Film photography</div><div className='ProjectListItemText3'><p>My film photography process from shooting to developing and scanning at home.</p></div></div></a>
+                </Carousel>
+            </div>
+            <div className='Iconsdiv'>
+                <a className="socialicon" href="https://github.com/Eljowe" target="_blank" rel="noopener noreferrer"><BsGithub className='Socialicon' size='4vh'/></a>
+                <a className="socialicon" href="https://www.linkedin.com/in/joelwickstrom/" target="_blank" rel="noopener noreferrer"><BsLinkedin className='Socialicon' size='4vh'/></a>
+            </div>
+        </div>
+    )
+}
+
+export default Projects3

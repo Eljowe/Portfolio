@@ -316,6 +316,7 @@ ul {
 
 #projects {
     padding: 70px 4vh 4vh 4vh;
+    height: 100vh;
     text-align: left;
     overflow: hidden;
     justify-content: center;
@@ -324,17 +325,17 @@ ul {
 }
 
 #dark #projects {
-    background-color: #17382E;
+    background-color: #282A3A;
     color: white;
 }
 
 #light #projects {
-    background-color: #383B3F;
+    background-color: #324B4B;
     color: white;
 }
 
 .ProjectList {
-    margin: auto;
+    margin: 5vh auto 25vh auto;
     text-align: justify;
     max-width: 110vh;
     justify-content: center;
@@ -343,7 +344,7 @@ ul {
 
 
 #projects h1 {
-    margin: auto;
+    margin: 0vh auto 0 auto;
     padding-bottom: 4vh;
     text-align: justify;
     max-width: 110vh;
@@ -476,6 +477,42 @@ ul {
     min-width: 60vw;
     padding: 0 5vw;
   }
+
+/* Projects 3 */
+
+.ProjectListItem3 {
+    height: 40vh;
+    width: auto;
+    object-fit: cover;
+    font-size: 2vh;
+    color: white;
+    border-radius: 3vh;
+    box-shadow: 1px 1px 10px 0px rgba(0,0,0,0.88);
+    overflow: hidden;
+    font-size: 2.5rem;
+    word-break: keep-all;
+    text-align: center;
+    vertical-align: middle;
+    margin: 20px;
+    max-width: 600px;
+    background-color: #1c1c20;
+}
+
+#projects * {
+    text-decoration: none;
+}
+
+.projectPic {
+    height: 15vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#projects .ProjectListItemText3 p {
+    padding: 1em;
+    text-align: left;
+}
 
 /* Resume section */
 
@@ -740,6 +777,12 @@ ul {
     }
 }
 
+@media all and (max-width: 900px) {
+    .ProjectListItem3 {
+        margin: 20px auto;
+    }
+}
+
 @media all and (max-width: 500px) {
 
     /* Navbar */
@@ -821,6 +864,14 @@ ul {
         max-width: 110vh;
         position: absolute;
         left: 0;
+    }
+
+    .ProjectListItem3 {
+        height: 60vh;
+    }
+
+    .projectPic {
+        height: 22.5vh;
     }
 
     /* Resume */

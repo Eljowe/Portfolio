@@ -26,8 +26,6 @@ const Projects2 = () => {
     }, [])
 
 
-
-
     return(
         <div id="projects2" >
             <h1>Projects</h1>
