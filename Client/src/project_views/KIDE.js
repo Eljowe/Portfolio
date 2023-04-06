@@ -1,5 +1,7 @@
 import { CodeBlock, dracula } from 'react-code-blocks'
 import kide from '../images/KIDE/tg.jpg'
+import applogin from '../images/KIDE/simul.PNG'
+import app from '../images/KIDE/vm.PNG'
 import React from 'react'
 import ProjectsNavbar from '../components/ProjectsNavbar'
 import Backbutton from '../components/Backbutton'
@@ -57,7 +59,8 @@ const KIDE = ({ toggleTheme, theme, projectScrolled }) => {
             <ProjectsNavbar toggleTheme={toggleTheme} theme={theme} projectScrolled={projectScrolled}/>
             <div className='projectdiv'>
                 <Backbutton />
-                <h3>Web automation: ticket bot</h3>
+                <h3>Web automation and cross-platform development: ticket bot</h3>
+                <h4 className="documentation_subtitle">Python bot</h4>
                 <p>
                     The tickets for student events are almost always sold on a third-party platform Kide App.
                     Some events sell out in seconds. Some events sell out instantly. I did this project to see if I could automate ticket buying
@@ -134,6 +137,27 @@ const KIDE = ({ toggleTheme, theme, projectScrolled }) => {
                     To sum things up, I got everything working as I wanted. I haven't really used the bot after testing it in one of the biggest student event ticket sales and proving its functionality.
                     I later found doing this project helpful when taking the course Web Software Development and working with APIs.
                 </p>
+                <h4 className="documentation_subtitle">Flutter App</h4>
+                <p>While participating in course Device Agnostic Design, I got intrigued by the idea of creating a mobile app. I tried to come up with good idea for a practicing project, but didn't have any ideas.
+                I decided to continue with this project, by creating a mobile Kide bot app. Flutter is a framework which allows creating apps for different platforms with the same programming language: Dart.
+                I had never heard about dart, but I was certainly interested in harvesting Flutter's power.</p>
+                <p>
+                    After some tutorial videos and practice assignments I got to coding. At first, I created the login screen and the functions required. I avoided creating a backend by making the user login request directly to Kide App API and then checking the response status to see if login was successful or not.
+                </p>
+
+                <p>
+                    I think the login page looks okay, for a first try.
+                </p>
+
+                <img className="KIDEimg" src={applogin} alt="android login screen"/>
+
+                <img className="KIDEimg" src={app} alt="android login screen"/>
+                <p>I then created the function to paste the event link and begin reserving process, but wanted to do more. I added some styling to the event page in my app: the picture and description are fetched from the API as well.
+                I then added a timer widget (pre-created by some library) to show the time until sale.</p>
+                <p>Then I added the functionality to use Kide App share link-button to open any event in my app. This was done by allowing the app to use special android permissions.</p>
+                <p>Lastly, I added a list of all the upcoming events and a search function inside the app. Somewhere in between I translated the python functions created before into Dart-code.</p>
+                <p>Flutter surprised me with its versatility. If I were to create a windows application of this same app, it would be were straightforward with Flutter, as I tried doing just that and succeeded.
+                Web applications I would not create with flutter, as JS+HTML+CSS seems superior to strange Flutter based web-layout in every way, performance included.</p>
                 <Backbutton />
             </div>
         </div>

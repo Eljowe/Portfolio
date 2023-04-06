@@ -1,7 +1,7 @@
 import { configureStore } from '@reduxjs/toolkit'
 import { combineReducers } from 'redux'
 const reducer = combineReducers({
-    // here we will be adding reducers
+    // here I will be adding reducers
 })
 const store = configureStore({
     reducer,

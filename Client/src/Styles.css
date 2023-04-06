@@ -67,7 +67,7 @@ body {
 }
 
 p {
-    font-size: 2vh;
+    font-size: 1.2rem;
 }
 
 h1 {
@@ -335,7 +335,7 @@ ul {
 }
 
 .ProjectList {
-    margin: 5vh auto 25vh auto;
+    margin: 5vh auto 15vh auto;
     text-align: justify;
     max-width: 110vh;
     justify-content: center;
@@ -344,7 +344,7 @@ ul {
 
 
 #projects h1 {
-    margin: 0vh auto 0 auto;
+    margin: 10vh auto 0 auto;
     padding-bottom: 4vh;
     text-align: justify;
     max-width: 110vh;
@@ -393,15 +393,15 @@ ul {
 }
 
 #caditem {
-    background: url("./images/3D/3D.JPG");
+    background: url("./images/3D/3D2.jpg");
     background-size: 100%;
     color: black;
     font-weight: bold;
 }
 
 #kideitem {
-    background: url("./images/KIDE/kide.PNG");
-    background-size: 100%;
+    background: url("./images/KIDE/KBBar.png");
+    background-size:100%;
 }
 
 .Iconsdiv {
@@ -481,21 +481,26 @@ ul {
 /* Projects 3 */
 
 .ProjectListItem3 {
-    height: 40vh;
+    height: 42vh;
     width: auto;
     object-fit: cover;
-    font-size: 2vh;
+    font-size: 1.2rem;
     color: white;
-    border-radius: 3vh;
+    border-radius: 1vh;
     box-shadow: 1px 1px 10px 0px rgba(0,0,0,0.88);
     overflow: hidden;
-    font-size: 2.5rem;
     word-break: keep-all;
     text-align: center;
     vertical-align: middle;
-    margin: 20px;
+    font-size: 4vh;
+    margin: 10px;
     max-width: 600px;
     background-color: #1c1c20;
+}
+
+.carousel-item {
+    padding: 10px;
+    margin: 0 0 2vh 0;
 }
 
 #projects * {
@@ -507,7 +512,11 @@ ul {
     display: flex;
     align-items: center;
     justify-content: center;
+    opacity: 0.9;
+    padding: 10px;
 }
+
+
 
 #projects .ProjectListItemText3 p {
     padding: 1em;
@@ -622,6 +631,10 @@ ul {
     padding: 2vh 0;
 }
 
+.projectdiv canvas {
+    padding: unset;
+}
+
 #dark .projectdiv {
     background-color: #1d1d1d;
     color: white;
@@ -645,11 +658,11 @@ ul {
 }
 
 #dark .documentation_subtitle {
-    color: #3D5B71;
+    color: #507691;
 }
 
 #light .documentation_subtitle {
-    color: #3D5B71;
+    color: #2d4557;
 }
 
 #light .code {
@@ -839,6 +852,10 @@ ul {
     }
 
     /* Projects */
+    .ProjectList {
+        margin: 5vh auto 5vh auto;
+    }
+
     #projects {
         padding: 8vh 4vh 4vh 4vh;
     }
@@ -866,8 +883,19 @@ ul {
         left: 0;
     }
 
+    #projects h1 {
+        margin: 2vh auto 0 auto;
+        padding-bottom: 4vh;
+        text-align: justify;
+        max-width: 110vh;
+    }
+
     .ProjectListItem3 {
         height: 60vh;
+    }
+
+    .ProjectListItem3 p {
+        font-size: 1.2rem;
     }
 
     .projectPic {

@@ -19,6 +19,7 @@ import FILM from './project_views/FILM'
 import KIDE from './project_views/KIDE'
 import RLAI from './project_views/RLAI'
 import WEBSITE from './project_views/WEBSITE'
+import useLocoScroll from './helpers/locoScroll'
 
 export const ThemeContext = createContext(null)
 
