@@ -10,24 +10,21 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { CSSRulePlugin } from 'gsap/CSSRulePlugin'
 import useLocoScroll from '../helpers/locoScroll'
 import ScrollToTop from '../helpers/ScrollToTop'
+import BurgerNavbar from '../components/BurgerNavbar'
 
 gsap.registerPlugin(ScrollTrigger)
 
-const Home = ({ toggleTheme, theme, isScrolled }) => {
+const Home = ({ toggleTheme, theme, isScrolled, toggleMenu, menuOpen }) => {
     const windowSize = useRef([window.innerWidth, window.innerHeight])
 
     window.onload=pageLoaded
     let tl2 = gsap.timeline({ defaults: { ease: 'rough.inOut', duration: 1.5 } })
 
-
     function pageLoaded() {
         tl2.from('.HomeTitle', { x: -windowSize.current[0]/8, delay:0.15, duration: 1.5, ease: 'power4.inOut', opacity: 0 })
             .from('.Home3D', { x: windowSize.current[0]/8, delay:0.15 , duration: 1.5, ease: 'power4.inOut', opacity: 0 }, '-=1.65')
             .from('.Navbar', { y: -80, delay:0.15 , duration: 1.5, ease: 'power4.inOut' }, '-=1.8')
-
-
     }
-
 
     useEffect(() => {
         gsap.timeline().to('.Home3D', {
@@ -124,11 +121,13 @@ const Home = ({ toggleTheme, theme, isScrolled }) => {
     })
 
 
-
-
     return (
         <div className='pagecontainer' >
-            <Navbar toggleTheme={toggleTheme} theme={theme} isScrolled={isScrolled}/>
+            {menuOpen === 'open' ?
+                <Navbar toggleTheme={toggleTheme} theme={theme} isScrolled={isScrolled} toggleMenu={toggleMenu} menuOpen={menuOpen} />
+                :
+                <BurgerNavbar toggleTheme={toggleTheme} theme={theme} isScrolled={isScrolled} toggleMenu={toggleMenu} menuOpen={menuOpen}/> 
+            }
             <div id='home' >
                 <div className='HomeTitle'>
                     <h1>Portfolio</h1>

@@ -5,8 +5,9 @@ import app from '../images/KIDE/vm.PNG'
 import React from 'react'
 import ProjectsNavbar from '../components/ProjectsNavbar'
 import Backbutton from '../components/Backbutton'
+import BurgerNavbar from '../components/BurgerNavbar'
 
-const KIDE = ({ toggleTheme, theme, projectScrolled }) => {
+const KIDE = ({ toggleTheme, theme, projectScrolled, toggleMenu }) => {
     const logincode = `def login_OAUTH(driver, email, password):
     loginpath = 'https://auth.kide.app/oauth2/token'
     payload = f'client_id=56d9cbe22a58432b97c287eadda040df&grant_type=password&password={password}&rememberMe=true&username={email}
@@ -56,7 +57,7 @@ const KIDE = ({ toggleTheme, theme, projectScrolled }) => {
 
     return(
         <div>
-            <ProjectsNavbar toggleTheme={toggleTheme} theme={theme} projectScrolled={projectScrolled}/>
+            <ProjectsNavbar toggleTheme={toggleTheme} theme={theme} projectScrolled={projectScrolled} toggleMenu={toggleMenu}/>
             <div className='projectdiv'>
                 <Backbutton />
                 <h3>Web automation and cross-platform development: ticket bot</h3>

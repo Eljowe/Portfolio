@@ -4,8 +4,9 @@ import React from 'react'
 import ProjectsNavbar from '../components/ProjectsNavbar'
 //<img className="RLimg" src={yhdet} alt="2048 game"/>
 import Backbutton from '../components/Backbutton'
+import BurgerNavbar from '../components/BurgerNavbar'
 
-const RLAI = ({ toggleTheme, theme, projectScrolled }) => {
+const RLAI = ({ toggleTheme, theme, projectScrolled, toggleMenu }) => {
     const code = `import gym
 from gym import spaces
 
@@ -79,7 +80,7 @@ def _next_observation(self):
 
     return(
         <div>
-            <ProjectsNavbar toggleTheme={toggleTheme} theme={theme} projectScrolled={projectScrolled}/>
+            <ProjectsNavbar toggleTheme={toggleTheme} theme={theme} projectScrolled={projectScrolled} toggleMenu={toggleMenu}/>
             <div className='projectdiv'>
                 <Backbutton />
                 <h3>Reinforcement learning experiment on browser game</h3>

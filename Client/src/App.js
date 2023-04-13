@@ -82,18 +82,24 @@ function App() {
         setThemeInStorage(newtheme)
     }
 
+    const [menuOpen, setMenuOpen] = useState('closed')
+
+    const toggleMenu = () => {
+        setMenuOpen((curr) => (curr === 'open' ? 'closed' : 'open'))
+    }
+
     return (
         <ThemeContext.Provider value={{ theme, toggleTheme }}>
             <div className="App" id={theme===null ? 'dark' : theme}>
                 <Router>
                     <Routes>
-                        <Route path='/' exact={true} element={<Home toggleTheme={toggleTheme} theme={theme} isScrolled={isScrolled}/>} />
-                        <Route path='*' exact={true} element={<NotFoundPage toggleTheme={toggleTheme} theme={theme}/>} />
-                        <Route path="/portfolioproject" element={<WEBSITE toggleTheme={toggleTheme} theme={theme} projectScrolled={projectScrolled}/>} />
-                        <Route path="/RL" element={<RLAI toggleTheme={toggleTheme} theme={theme} projectScrolled={projectScrolled}/>}/>
-                        <Route path="/ticketbot" element={<KIDE toggleTheme={toggleTheme} theme={theme} projectScrolled={projectScrolled}/>} />
-                        <Route path="/3dDesign" element={<CAD toggleTheme={toggleTheme} theme={theme} projectScrolled={projectScrolled}/>} />
-                        <Route path="/film" element={<FILM toggleTheme={toggleTheme} theme={theme} projectScrolled={projectScrolled}/>} />
+                        <Route path='/' exact={true} element={<Home toggleTheme={toggleTheme} theme={theme} isScrolled={isScrolled} toggleMenu={toggleMenu} menuOpen={menuOpen} />} />
+                        <Route path='*' exact={true} element={<NotFoundPage toggleTheme={toggleTheme} theme={theme} toggleMenu={toggleMenu} menuOpen={menuOpen} />} />
+                        <Route path="/portfolioproject" element={<WEBSITE toggleTheme={toggleTheme} theme={theme} projectScrolled={projectScrolled} toggleMenu={toggleMenu} menuOpen={menuOpen} />} />
+                        <Route path="/RL" element={<RLAI toggleTheme={toggleTheme} theme={theme} projectScrolled={projectScrolled} toggleMenu={toggleMenu} menuOpen={menuOpen} />}/>
+                        <Route path="/ticketbot" element={<KIDE toggleTheme={toggleTheme} theme={theme} projectScrolled={projectScrolled} toggleMenu={toggleMenu} menuOpen={menuOpen} />} />
+                        <Route path="/3dDesign" element={<CAD toggleTheme={toggleTheme} theme={theme} projectScrolled={projectScrolled} toggleMenu={toggleMenu} menuOpen={menuOpen} />} />
+                        <Route path="/film" element={<FILM toggleTheme={toggleTheme} theme={theme} projectScrolled={projectScrolled} toggleMenu={toggleMenu} menuOpen={menuOpen} />} />
                     </Routes>
                 </Router>
                 {isScrolled && <h1><ScrollTopArrow/></h1>}

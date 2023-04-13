@@ -3,8 +3,9 @@ import ProjectsNavbar from '../components/ProjectsNavbar'
 import Backbutton from '../components/Backbutton'
 import { CodeBlock, dracula } from 'react-code-blocks'
 import Home3D from '../components/Sphere3D'
+import BurgerNavbar from '../components/BurgerNavbar'
 
-const WEBSITE = ({ toggleTheme, theme, projectScrolled }) => {
+const WEBSITE = ({ toggleTheme, theme, projectScrolled, toggleMenu }) => {
     const code = `"scripts": {
         "start": "node index.js",
         "dev": "nodemon index.js",
@@ -15,7 +16,7 @@ const WEBSITE = ({ toggleTheme, theme, projectScrolled }) => {
     },`
     return(
         <div>
-            <ProjectsNavbar toggleTheme={toggleTheme} theme={theme} projectScrolled={projectScrolled}/>
+            <ProjectsNavbar toggleTheme={toggleTheme} theme={theme} projectScrolled={projectScrolled} toggleMenu={toggleMenu}/>
             <div className='projectdiv'>
                 <Backbutton />
                 <h3>Portfolio (this website)</h3>

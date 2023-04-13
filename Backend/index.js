@@ -24,6 +24,20 @@ app.get('/', (req, res) => {
   res.send('')
 })
 
+app.get('/api/download', (req, res) => {
+  var filePath = "./public/kidebot.apk";
+  var fileName = "kidebot.apk";
+  console.log('download requested for android')
+  res.download(filePath, fileName);    
+})
+
+app.get('/api/ios', (req, res) => {
+  var filePath = "./public/runner.zip";
+  var fileName = "runner.zip";
+  console.log('download requested for ios')
+  res.download(filePath, fileName);    
+})
+
 app.get('/*', function(req, res) {
   res.sendFile(path.join(__dirname, './build/index.html'), function(err) {
     if (err) {
@@ -31,6 +45,7 @@ app.get('/*', function(req, res) {
     }
   })
 })
+
 
 const unknownEndpoint = (request, response) => {
   response.status(404).send({ error: 'unknown endpoint' })

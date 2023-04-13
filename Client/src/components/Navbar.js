@@ -1,13 +1,16 @@
 import React from 'react'
 import ReactSwitch from 'react-switch'
-import { BsFillMoonStarsFill, BsFillSunFill } from 'react-icons/bs'
+import { BsFillMoonStarsFill, BsFillSunFill, BsX, BsList } from 'react-icons/bs'
 
-const Navbar = ({ toggleTheme, theme, isScrolled }) => {
+const Navbar = ({ toggleTheme, theme, isScrolled, toggleMenu }) => {
 
     return (
         <div className={isScrolled ? 'NavbarScrolled' : 'Navbar'}>
             <nav>
                 <ul>
+                    <li>
+                        <a className='BsXNavItem' onClick={toggleMenu}><BsX className='BsX' size='40px'/></a>
+                    </li>
                     <li>
                         <a className='NavItem' href="#home">Home</a>
                     </li>

@@ -2,11 +2,12 @@ import setup from '../images/FILM/film_setup.jpg'
 import React from 'react'
 import ProjectsNavbar from '../components/ProjectsNavbar'
 import Backbutton from '../components/Backbutton'
+import BurgerNavbar from '../components/BurgerNavbar'
 
-const FILM = ({ toggleTheme, theme, projectScrolled }) => {
+const FILM = ({ toggleTheme, theme, projectScrolled, toggleMenu }) => {
     return(
         <div>
-            <ProjectsNavbar toggleTheme={toggleTheme} theme={theme} projectScrolled={projectScrolled}/>
+            <ProjectsNavbar toggleTheme={toggleTheme} theme={theme} projectScrolled={projectScrolled} toggleMenu={toggleMenu}/>
             <div className='projectdiv'>
                 <Backbutton />
                 <h3>Film photography, developing and scanning</h3>
