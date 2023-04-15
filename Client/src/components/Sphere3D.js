@@ -4,6 +4,8 @@ import { useEffect, useRef } from 'react'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
 import { STLLoader } from 'three/examples/jsm/loaders/STLLoader'
 import { ThreeMFLoader } from 'three/examples/jsm/loaders/3MFLoader'
+import { gsap } from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
 
 // Home 3D object viewer window. Custom STL-files are supported. For now the object is a sphere
@@ -14,9 +16,11 @@ const Home3D = ({ theme }) => {
         const helper = new THREE.GridHelper( 1000, 40, 0x303030, 0x303030 )
         helper.position.y = -40
 
+        //scene.add(helper)
+
 
         var camera = new THREE.PerspectiveCamera( 35, 1.2, 1, 1000 )
-        camera.position.set( 400, 0,10 )
+        camera.position.set( 0, 0, 0 )
 
 
         var renderer = new THREE.WebGLRenderer()
@@ -52,12 +56,12 @@ const Home3D = ({ theme }) => {
         const controls = new OrbitControls(camera, renderer.domElement)
         controls.enabled = false
         controls.enablePan = false
-        controls.enableZoom = false
+        controls.enableZoom = true
         controls.autoRotate = true
         controls.autoRotateSpeed = 2
         //scene.userData.controls = controls //this allowed continuing scrolling div when in render view
         controls.minDistance = 400 //50
-        controls.maxDistance = 400 //400
+        controls.maxDistance = 800 //400
 
         camera.position.z = 5
 
@@ -100,6 +104,8 @@ const Home3D = ({ theme }) => {
 
             render()
 
+            
+
             //stats.update()
         }
 
@@ -107,8 +113,26 @@ const Home3D = ({ theme }) => {
             renderer.render(scene, camera)
         }
 
+        gsap.registerPlugin(ScrollTrigger)
+        gsap.to(camera.position, {
+            scrollTrigger: {
+              trigger: ".pagecontainer",
+              start: "top top",
+              end: "+=70%",
+              scrub: true,
+              //markers:true,
+              ease: null,
+            },
+            y: 600,
+            onUpdate: () => {
+              // Update the camera's view
+              camera.updateProjectionMatrix();
+            }
+          })
+
         animate()
     }, [theme])
+
 
 
     return (
