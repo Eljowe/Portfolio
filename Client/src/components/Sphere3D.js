@@ -18,7 +18,6 @@ const Home3D = ({ theme }) => {
 
         //scene.add(helper)
 
-
         var camera = new THREE.PerspectiveCamera( 35, 1.2, 1, 1000 )
         camera.position.set( 0, 0, 0 )
 
@@ -104,8 +103,6 @@ const Home3D = ({ theme }) => {
 
             render()
 
-            
-
             //stats.update()
         }
 
@@ -116,24 +113,22 @@ const Home3D = ({ theme }) => {
         gsap.registerPlugin(ScrollTrigger)
         gsap.to(camera.position, {
             scrollTrigger: {
-              trigger: ".pagecontainer",
-              start: "top top",
-              end: "+=70%",
-              scrub: true,
-              //markers:true,
-              ease: null,
+                trigger: '.pagecontainer',
+                start: 'top top',
+                end: '+=65%%',
+                scrub: true,
+                //markers:true,
+                ease: null,
             },
             y: 600,
             onUpdate: () => {
-              // Update the camera's view
-              camera.updateProjectionMatrix();
+                // Update the camera's view
+                camera.updateProjectionMatrix()
             }
-          })
+        })
 
         animate()
     }, [theme])
-
-
 
     return (
         <div ref={mountRef} className="ThreeJSWindow">

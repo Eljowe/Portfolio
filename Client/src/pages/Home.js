@@ -31,7 +31,7 @@ const Home = ({ toggleTheme, theme, isScrolled, toggleMenu, menuOpen }) => {
             scrollTrigger:{
                 trigger: '.pagecontainer',
                 start:'+=50',
-                end: '+=600',
+                end: '+=65%',
                 scrub: true,
                 ease: 'power2.inOut',
                 //invalidateOnRefresh: true
@@ -41,12 +41,15 @@ const Home = ({ toggleTheme, theme, isScrolled, toggleMenu, menuOpen }) => {
             scrollTrigger:{
                 trigger: '.pagecontainer',
                 start: '+=50',
-                end: '+=600',
+                end: '+=65%',
                 scrub: true,
                 ease: 'power2.inOut',
-                invalidateOnRefresh: true
+                invalidateOnRefresh: true,
+                //markers: true,
             },
             opacity: 0,
+            rotationX: 50,
+            y: 20,
         }).fromTo('.Foreword', {
             opacity: 0, x: 500 }, { opacity:1, x: 0,
             scrollTrigger: {
@@ -126,7 +129,7 @@ const Home = ({ toggleTheme, theme, isScrolled, toggleMenu, menuOpen }) => {
             {menuOpen === 'open' ?
                 <Navbar toggleTheme={toggleTheme} theme={theme} isScrolled={isScrolled} toggleMenu={toggleMenu} menuOpen={menuOpen} />
                 :
-                <BurgerNavbar toggleTheme={toggleTheme} theme={theme} isScrolled={isScrolled} toggleMenu={toggleMenu} menuOpen={menuOpen}/> 
+                <BurgerNavbar toggleTheme={toggleTheme} theme={theme} isScrolled={isScrolled} toggleMenu={toggleMenu} menuOpen={menuOpen}/>
             }
             <div id='home' >
                 <div className='HomeTitle'>

@@ -1,6 +1,7 @@
 import React from 'react'
 import ReactSwitch from 'react-switch'
 import { BsFillMoonStarsFill, BsFillSunFill, BsX, BsList } from 'react-icons/bs'
+import Hamburger from 'hamburger-react'
 
 const Navbar = ({ toggleTheme, theme, isScrolled, toggleMenu }) => {
 

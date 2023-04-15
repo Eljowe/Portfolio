@@ -39,7 +39,7 @@ const Projects3 = () => {
                     keyBoardControl={true}
                     transitionDuration={500}
                     containerClass="carousel-container"
-                    removeArrowOnDeviceType={["mobile"]}
+                    removeArrowOnDeviceType={['mobile']}
                     dotListClass="custom-dot-list-style"
                     itemClass="carousel-item"
                     //focusOnSelect={true}

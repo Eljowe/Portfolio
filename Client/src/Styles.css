@@ -258,13 +258,13 @@ ul {
 
 .HomeTitle{
     text-align: right;
-    position: absolute;
+    position: fixed;
     top: 45vh;
     left: calc(50vw - 250px);
 }
 
 .Home3D {
-    position: absolute;
+    position:fixed;
     left: 50vw;
 }
 
@@ -277,7 +277,7 @@ ul {
     overflow: hidden;
     justify-content: center;
     align-items: center;
-    box-shadow: -1px -1px 10px 0px rgba(0,0,0,0.88)
+    box-shadow: -1px -1px 10px 0px rgba(0,0,0,0.88);
 }
 
 #dark #about {
@@ -869,8 +869,6 @@ ul {
         left: 50vw;
         transform: translate(-50%, -50%);
     }
-
-
 
     canvas{
         overflow : scroll;
