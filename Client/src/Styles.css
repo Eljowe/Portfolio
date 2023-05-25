@@ -266,6 +266,7 @@ ul {
 .Home3D {
     position:fixed;
     left: 50vw;
+    z-index: 1;
 }
 
 

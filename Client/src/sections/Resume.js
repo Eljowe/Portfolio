@@ -42,7 +42,7 @@ const Resume = () => {
                     <ul className="skillsList">
                         <li className="skill">Python</li>
                         <li className="skill">Solidworks CAD</li>
-                        <li className="skill">Web software development (JS, React, etc.)</li>
+                        <li className="skill">Web software development (Node, React, ThreeJS etc.)</li>
                         <li className="skill">VS Code and git</li>
                         <li className="skill">Background in electrical engineering</li>
                     </ul>

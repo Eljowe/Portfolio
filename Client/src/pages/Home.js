@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import Sphere3D from '../components/Sphere3D'
 import About from '../sections/About'
 import Projects from '../sections/Projects'
@@ -36,7 +36,7 @@ const Home = ({ toggleTheme, theme, isScrolled, toggleMenu, menuOpen }) => {
                 ease: 'power2.inOut',
                 //invalidateOnRefresh: true
             },
-            opacity: 0,
+            opacity: 0, zIndex: 0,
         }).to('.HomeTitle', {
             scrollTrigger:{
                 trigger: '.pagecontainer',
@@ -121,6 +121,8 @@ const Home = ({ toggleTheme, theme, isScrolled, toggleMenu, menuOpen }) => {
                 //markers: true,
             }
         })
+
+        
     })
 
 
