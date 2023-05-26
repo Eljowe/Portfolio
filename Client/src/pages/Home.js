@@ -11,6 +11,7 @@ import { CSSRulePlugin } from 'gsap/CSSRulePlugin'
 import useLocoScroll from '../helpers/locoScroll'
 import ScrollToTop from '../helpers/ScrollToTop'
 import BurgerNavbar from '../components/BurgerNavbar'
+import NavigationScreen from '../components/NavigationScreen'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -122,17 +123,15 @@ const Home = ({ toggleTheme, theme, isScrolled, toggleMenu, menuOpen }) => {
             }
         })
 
-        
+
     })
 
 
     return (
         <div className='pagecontainer' >
-            {menuOpen === 'open' ?
-                <Navbar toggleTheme={toggleTheme} theme={theme} isScrolled={isScrolled} toggleMenu={toggleMenu} menuOpen={menuOpen} />
-                :
-                <BurgerNavbar toggleTheme={toggleTheme} theme={theme} isScrolled={isScrolled} toggleMenu={toggleMenu} menuOpen={menuOpen}/>
-            }
+            <NavigationScreen toggleTheme={toggleTheme} theme={theme} isScrolled={isScrolled} toggleMenu={toggleMenu} menuOpen={menuOpen}/>
+            <BurgerNavbar toggleTheme={toggleTheme} theme={theme} isScrolled={isScrolled} toggleMenu={toggleMenu} menuOpen={menuOpen}/>
+
             <div id='home' >
                 <div className='HomeTitle'>
                     <h1>Portfolio</h1>

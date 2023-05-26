@@ -158,7 +158,7 @@ const KIDE = ({ toggleTheme, theme, projectScrolled, toggleMenu }) => {
                 <p>Then I added the functionality to use Kide App share link-button to open any event in my app. This was done by allowing the app to use special android permissions.</p>
                 <p>Lastly, I added a list of all the upcoming events and a search function inside the app. Somewhere in between I translated the python functions created before into Dart-code.</p>
                 <p>Flutter surprised me with its versatility. If I were to create a windows application of this same app, it would be were straightforward with Flutter, as I tried doing just that and succeeded.
-                Web applications I would not create with flutter, as JS+HTML+CSS seems superior to strange Flutter based web-layout in every way, performance included.</p>
+                Web applications I would not create with flutter, as JS+HTML+CSS seems superior in comparison to strange Flutter based web-layout in every way, performance included.</p>
                 <Backbutton />
             </div>
         </div>

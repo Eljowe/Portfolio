@@ -218,7 +218,42 @@ ul {
     overflow: unset;
 }
 
+.NavigationScreen {
+    position: fixed;
+    left: -50vw;
+    z-index: 6;
+    width: auto;
+    height: 100vh;
+    display: block;
+    background-color: #181818;
+}
+.NavigationScreenItem {
+    display: flex;
+    text-decoration: none;
+    width: 100%;
+    font-size: 2rem;
+    text-align: left;
+    align-items: left;
+    color: white;
+}
 
+.NavList {
+    display: block;
+    padding: 2vh 10vw;
+}
+
+.NavigationScreenCross {
+    color: white;
+    display: flex;
+    align-items: flex-start;
+}
+
+
+
+.BsX {
+    margin-left: -17px;
+    cursor: pointer;
+}
 
 /* Home section */
 

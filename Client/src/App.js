@@ -20,12 +20,14 @@ import KIDE from './project_views/KIDE'
 import RLAI from './project_views/RLAI'
 import WEBSITE from './project_views/WEBSITE'
 import useLocoScroll from './helpers/locoScroll'
+import { gsap } from 'gsap'
 
 export const ThemeContext = createContext(null)
 
 function App() {
     const [isScrolled, setIsScrolled] = useState(false)
     const [projectScrolled, setProjectScrolled] = useState(false)
+    const [gsapMenu, setGsapMenu] = useState(false);
 
     useEffect(() => {
         const checkScroll = () => {
@@ -86,6 +88,20 @@ function App() {
 
     const toggleMenu = () => {
         setMenuOpen((curr) => (curr === 'open' ? 'closed' : 'open'))
+        setGsapMenu((curr) => !curr)
+        if (gsapMenu) {
+            gsap.timeline().to('.NavigationScreen', {
+                duration: 0.3,
+                x: '-50%',
+                ease: 'power2.inOut'
+            })} else {
+            gsap.timeline().to('.NavigationScreen', {
+                duration: 0.3,
+                x: '50vw',
+                ease: 'power2.inOut',
+            })
+        }
+
     }
 
     return (
