@@ -7,7 +7,7 @@ import { BsX } from 'react-icons/bs'
 const NavigationScreen = ({ toggleTheme, theme, projectScrolled, toggleMenu }) => {
     return(
         <div className='NavigationScreen'>
-            
+
             <nav>
                 <ul className='NavList'>
                     <li>
@@ -29,7 +29,7 @@ const NavigationScreen = ({ toggleTheme, theme, projectScrolled, toggleMenu }) =
             </nav>
         </div>
     )
-    
+
 }
 
 export default NavigationScreen

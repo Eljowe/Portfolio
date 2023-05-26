@@ -27,7 +27,7 @@ export const ThemeContext = createContext(null)
 function App() {
     const [isScrolled, setIsScrolled] = useState(false)
     const [projectScrolled, setProjectScrolled] = useState(false)
-    const [gsapMenu, setGsapMenu] = useState(false);
+    const [gsapMenu, setGsapMenu] = useState(false)
 
     useEffect(() => {
         const checkScroll = () => {
