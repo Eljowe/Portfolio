@@ -4,6 +4,7 @@ import Backbutton from '../components/Backbutton'
 import { CodeBlock, dracula } from 'react-code-blocks'
 import Home3D from '../components/Sphere3D'
 import BurgerNavbar from '../components/BurgerNavbar'
+import NavigationScreen from '../components/NavigationScreen'
 
 const WEBSITE = ({ toggleTheme, theme, projectScrolled, toggleMenu }) => {
     const code = `"scripts": {
