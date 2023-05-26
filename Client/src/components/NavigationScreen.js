@@ -7,12 +7,9 @@ import { BsX } from 'react-icons/bs'
 const NavigationScreen = ({ toggleTheme, theme, projectScrolled, toggleMenu }) => {
     return(
         <div className='NavigationScreen'>
-
+            <a className='NavigationScreenCross' onClick={toggleMenu}><BsX className='BsX' size='4rem'/></a>
             <nav>
                 <ul className='NavList'>
-                    <li>
-                        <a className='NavigationScreenCross' onClick={toggleMenu}><BsX className='BsX' size='4rem'/></a>
-                    </li>
                     <li>
                         <a className='NavigationScreenItem' href="#home" onClick={toggleMenu}>Home</a>
                     </li>
