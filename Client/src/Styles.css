@@ -412,7 +412,7 @@ ul {
 .ProjectList {
     margin: 5vh auto 15vh auto;
     text-align: justify;
-    max-width: 110vh;
+    max-width: 140vh;
     justify-content: center;
 }
 
@@ -556,7 +556,7 @@ ul {
 /* Projects 3 */
 
 .ProjectListItem3 {
-    height: 42vh;
+    height: 50vh;
     width: auto;
     object-fit: cover;
     font-size: 1.2rem;
