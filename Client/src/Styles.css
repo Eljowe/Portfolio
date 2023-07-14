@@ -491,7 +491,7 @@ ul {
 
 .Socialicon {
     color: white;
-    margin: 2vh 2vh 2vh 0;
+    margin: 2vh 1rem;
 }
 
 /* Projects2 */
@@ -864,6 +864,14 @@ ul {
 	background-color: rgb(65, 65, 65);
 }
 
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: #282A3A;
+    color: white;
+}
+
 @keyframes fade-in {
     from {
       opacity: 0;
@@ -966,7 +974,7 @@ ul {
 
     #projects h1 {
         margin: 2vh auto 0 auto;
-        padding-bottom: 4vh;
+        padding-bottom: 0vh;
         text-align: justify;
         max-width: 110vh;
     }
@@ -1024,7 +1032,7 @@ ul {
     }
 
     .Socialicon {
-        margin-right: 4vh;
+        margin: 2vh 1em;
     }
 
     .STL_div {

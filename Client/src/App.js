@@ -21,6 +21,7 @@ import WEBSITE from './project_views/WEBSITE'
 import TAPIO from './project_views/TAPIO'
 import useLocoScroll from './helpers/locoScroll'
 import { gsap } from 'gsap'
+import { BsGithub, BsLinkedin } from 'react-icons/bs'
 
 export const ThemeContext = createContext(null)
 
@@ -120,7 +121,10 @@ function App() {
                     </Routes>
                 </Router>
                 {isScrolled && <h1><ScrollTopArrow/></h1>}
-                <footer></footer>
+                <footer>
+                    <a className="socialicon" href="https://github.com/Eljowe" target="_blank" rel="noopener noreferrer"><BsGithub className='Socialicon' size='4vh'/></a>
+                    <a className="socialicon" href="https://www.linkedin.com/in/joelwickstrom/" target="_blank" rel="noopener noreferrer"><BsLinkedin className='Socialicon' size='4vh'/></a>
+                </footer>
             </div>
         </ThemeContext.Provider>
     )

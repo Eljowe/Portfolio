@@ -52,10 +52,6 @@ const Projects3 = () => {
                     <a href="/film"  ><div className='ProjectListItem3'><div className='projectPic' id="filmitem">Film photography</div><div className='ProjectListItemText3'><p>My film photography process from shooting to developing and scanning at home.</p></div></div></a>
                 </Carousel>
             </div>
-            <div className='Iconsdiv'>
-                <a className="socialicon" href="https://github.com/Eljowe" target="_blank" rel="noopener noreferrer"><BsGithub className='Socialicon' size='4vh'/></a>
-                <a className="socialicon" href="https://www.linkedin.com/in/joelwickstrom/" target="_blank" rel="noopener noreferrer"><BsLinkedin className='Socialicon' size='4vh'/></a>
-            </div>
         </div>
     )
 }
