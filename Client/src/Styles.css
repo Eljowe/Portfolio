@@ -294,8 +294,8 @@ ul {
 .HomeTitle{
     text-align: left;
     position: fixed;
-    top: 30vh;
-    font-size: 4vw;
+    top: 35vh;
+    font-size: calc(30px + ((600vw - 320px) / 580));
     left: calc(10vw);
     z-index: 5;
     color: #eff876;

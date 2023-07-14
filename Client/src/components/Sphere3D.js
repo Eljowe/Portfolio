@@ -45,10 +45,10 @@ const Home3D = ({ theme }) => {
         dirLight.shadow.mapSize.set( 1024, 1024 )
         scene.add( dirLight )
 
-        const container = document.getElementById('3DBox');
-        renderer.setSize(container.offsetWidth, container.offsetHeight);
+        const container = document.getElementById('3DBox')
+        renderer.setSize(container.offsetWidth, container.offsetHeight)
         renderer.setPixelRatio( window.devicePixelRatio )
-        container.appendChild(renderer.domElement);
+        container.appendChild(renderer.domElement)
         camera.aspect =container.offsetWidth/container.offsetHeight
         camera.updateProjectionMatrix()
         mountRef.current.innerHTML = ''
@@ -88,11 +88,11 @@ const Home3D = ({ theme }) => {
 
         function onWindowResize(){
             renderer.setPixelRatio( window.devicePixelRatio )
-            const container = document.getElementById('3DBox');
-            renderer.setSize(container.offsetWidth, container.offsetHeight);
+            const container = document.getElementById('3DBox')
+            renderer.setSize(container.offsetWidth, container.offsetHeight)
             camera.aspect =container.offsetWidth/container.offsetHeight
             camera.updateProjectionMatrix()
-            container.appendChild(renderer.domElement);
+            container.appendChild(renderer.domElement)
         }
 
         scene.add( sphere )
@@ -110,7 +110,7 @@ const Home3D = ({ theme }) => {
             renderer.render(scene, camera)
         }
 
-        
+
         animate()
     }, [theme])
 

@@ -9,9 +9,9 @@ const About = () => {
                 <div className='Foreword'>
                     <p>
                         I am a 23-year-old Masters student currently specializing in Human-Computer Interaction at Aalto University.
-                        Alongside my primary field of study, I have also pursued a minor in Computer Science, further expanding my technical expertise. 
+                        Alongside my primary field of study, I have also pursued a minor in Computer Science, further expanding my technical expertise.
                         My background is in electrical engineering, in which I hold a bachelor's degree from Aalto University.
-                        Additionally, I have a keen interest in Mathematics, which I try to study at University of Helsinki whenever time permits. 
+                        Additionally, I have a keen interest in Mathematics, which I try to study at University of Helsinki whenever time permits.
                         My academic journey is driven by an interest for exploring the intersection of technology and design.
                     </p>
                 </div>

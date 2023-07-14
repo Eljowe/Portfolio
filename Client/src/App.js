@@ -1,15 +1,11 @@
 import './Styles.css'
 import {
     BrowserRouter as Router,
-    Switch,
     Route,
-    Link,
-    Navigate,
     Routes
 } from 'react-router-dom'
 import Home from './pages/Home'
-import ScrollToTop from './helpers/ScrollToTop'
-import { createContext, useState, useEffect, useRef } from 'react'
+import { createContext, useState, useEffect } from 'react'
 import React from 'react'
 import NotFoundPage from './pages/NotFoundPage'
 import ScrollTopArrow from './components/ScrollTopArrow'
@@ -19,7 +15,6 @@ import KIDE from './project_views/KIDE'
 import RLAI from './project_views/RLAI'
 import WEBSITE from './project_views/WEBSITE'
 import TAPIO from './project_views/TAPIO'
-import useLocoScroll from './helpers/locoScroll'
 import { gsap } from 'gsap'
 import { BsGithub, BsLinkedin } from 'react-icons/bs'
 
@@ -32,7 +27,7 @@ function App() {
 
     useEffect(() => {
         const checkScroll = () => {
-            if (window.pageYOffset > window.innerHeight) {
+            if (window.scrollY > window.innerHeight) {
                 setIsScrolled(true)
             } else {
                 setIsScrolled(false)
