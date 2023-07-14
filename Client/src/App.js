@@ -18,6 +18,7 @@ import FILM from './project_views/FILM'
 import KIDE from './project_views/KIDE'
 import RLAI from './project_views/RLAI'
 import WEBSITE from './project_views/WEBSITE'
+import TAPIO from './project_views/TAPIO'
 import useLocoScroll from './helpers/locoScroll'
 import { gsap } from 'gsap'
 
@@ -115,6 +116,7 @@ function App() {
                         <Route path="/ticketbot" element={<KIDE toggleTheme={toggleTheme} theme={theme} projectScrolled={projectScrolled} toggleMenu={toggleMenu} menuOpen={menuOpen} />} />
                         <Route path="/3dDesign" element={<CAD toggleTheme={toggleTheme} theme={theme} projectScrolled={projectScrolled} toggleMenu={toggleMenu} menuOpen={menuOpen} />} />
                         <Route path="/film" element={<FILM toggleTheme={toggleTheme} theme={theme} projectScrolled={projectScrolled} toggleMenu={toggleMenu} menuOpen={menuOpen} />} />
+                        <Route path="/tapio" element={<TAPIO toggleTheme={toggleTheme} theme={theme} projectScrolled={projectScrolled} toggleMenu={toggleMenu} menuOpen={menuOpen} />} />
                     </Routes>
                 </Router>
                 {isScrolled && <h1><ScrollTopArrow/></h1>}

@@ -421,8 +421,9 @@ ul {
 #projects h1 {
     margin: 10vh auto 0 auto;
     padding-bottom: 4vh;
-    text-align: justify;
-    max-width: 110vh;
+    padding-left: 20px;
+    text-align:justify;
+    max-width: 140vh;
 }
 
 #projects p {
@@ -455,6 +456,11 @@ ul {
     background-size:100%;
     color: black;
     font-weight: bold;
+}
+
+#tapioitem {
+    background: url("./images/tapio.PNG");
+    background-size: 100%;
 }
 
 #filmitem {
