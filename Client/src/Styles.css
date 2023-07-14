@@ -297,7 +297,7 @@ ul {
     top: 20vh;
     font-size: 4vw;
     left: calc(10vw);
-    z-index: 6;
+    z-index: 5;
     color: #eff876;
     font-weight: 900;
 }
