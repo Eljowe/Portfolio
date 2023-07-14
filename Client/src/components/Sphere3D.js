@@ -51,7 +51,7 @@ const Home3D = ({ theme }) => {
         container.appendChild(renderer.domElement);
         camera.aspect =container.offsetWidth/container.offsetHeight
         camera.updateProjectionMatrix()
-
+        mountRef.current.innerHTML = ''
         mountRef.current.appendChild( renderer.domElement )
 
         const controls = new OrbitControls(camera, renderer.domElement)
