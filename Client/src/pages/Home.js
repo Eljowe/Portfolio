@@ -21,8 +21,8 @@ const Home = ({ toggleTheme, theme, isScrolled, toggleMenu, menuOpen }) => {
     let tl2 = gsap.timeline({ defaults: { ease: 'rough.inOut', duration: 1.5 } })
 
     function pageLoaded() {
-        tl2.from('.HomeTitle', { x: -windowSize.current[0]/8, delay:0.15, duration: 1.5, ease: 'power4.inOut', opacity: 0 })
-            .from('.Home3D', { x: windowSize.current[0]/8, delay:0.15 , duration: 1.5, ease: 'power4.inOut', opacity: 0 }, '-=1.65')
+        tl2.from('.HomeTitle', { x: -windowSize.current[0]/4, delay:0.15, duration: 1.5, ease: 'power4.inOut', opacity: 0 })
+            .from('.Home3D', { x: windowSize.current[0]/4, delay:0.15 , duration: 1.5, ease: 'power4.inOut', opacity: 0 }, '-=1.65')
             .from('.Navbar', { y: -80, delay:0.15 , duration: 1.5, ease: 'power4.inOut' }, '-=1.8')
     }
 
