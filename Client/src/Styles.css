@@ -294,7 +294,7 @@ ul {
 .HomeTitle{
     text-align: left;
     position: fixed;
-    top: 20vh;
+    top: 30vh;
     font-size: 4vw;
     left: calc(10vw);
     z-index: 5;
@@ -882,6 +882,10 @@ footer {
     justify-content: center;
     background-color: #282A3A;
     color: white;
+}
+
+#light footer {
+    background-color: #324B4B;
 }
 
 @keyframes fade-in {
