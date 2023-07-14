@@ -122,8 +122,8 @@ function App() {
                 </Router>
                 {isScrolled && <h1><ScrollTopArrow/></h1>}
                 <footer>
-                    <a className="socialicon" href="https://github.com/Eljowe" target="_blank" rel="noopener noreferrer"><BsGithub className='Socialicon' size='4vh'/></a>
-                    <a className="socialicon" href="https://www.linkedin.com/in/joelwickstrom/" target="_blank" rel="noopener noreferrer"><BsLinkedin className='Socialicon' size='4vh'/></a>
+                    <a className="socialicon" href="https://github.com/Eljowe" target="_blank" rel="noopener noreferrer"><BsGithub className='Socialicon' size='26px'/></a>
+                    <a className="socialicon" href="https://www.linkedin.com/in/joelwickstrom/" target="_blank" rel="noopener noreferrer"><BsLinkedin className='Socialicon' size='26px'/></a>
                 </footer>
             </div>
         </ThemeContext.Provider>

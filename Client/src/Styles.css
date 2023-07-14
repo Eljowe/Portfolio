@@ -704,6 +704,7 @@ ul {
 
 .projectdiv {
     padding: 10vh 0;
+    min-height:91vh;
 }
 
 .projectdiv * {
@@ -712,6 +713,7 @@ ul {
     max-width: 70vh;
     font-weight: unset;
     padding: 2vh 0;
+
 }
 
 .projectdiv canvas {
