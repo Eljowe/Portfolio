@@ -36,7 +36,7 @@ const Home = ({ toggleTheme, theme, isScrolled, toggleMenu, menuOpen }) => {
                 ease: 'power2.inOut',
                 //invalidateOnRefresh: true
             },
-            opacity: 0, zIndex: 0,
+            opacity: 0, zIndex: 0, x: 200,
         }).to('.HomeTitle', {
             scrollTrigger:{
                 trigger: '.pagecontainer',
@@ -48,8 +48,7 @@ const Home = ({ toggleTheme, theme, isScrolled, toggleMenu, menuOpen }) => {
                 //markers: true,
             },
             opacity: 0,
-            rotationX: 50,
-            y: 20,
+            x: -200,
         }).fromTo('.Foreword', {
             opacity: 0, x: 500 }, { opacity:1, x: 0,
             scrollTrigger: {
@@ -133,10 +132,10 @@ const Home = ({ toggleTheme, theme, isScrolled, toggleMenu, menuOpen }) => {
 
             <div id='home' >
                 <div className='HomeTitle'>
-                    <h1>Portfolio</h1>
-                    <h1>Joel Wickström</h1>
+                    <h1>PORTFOLIO</h1>
+                    <h1>JOEL WICKSTRÖM </h1>
                 </div>
-                <div className='Home3D'>
+                <div id='3DBox' className='Home3D'>
                     <Sphere3D theme={theme}/>
                 </div>
             </div>

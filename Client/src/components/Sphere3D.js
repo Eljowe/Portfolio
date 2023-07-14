@@ -45,12 +45,14 @@ const Home3D = ({ theme }) => {
         dirLight.shadow.mapSize.set( 1024, 1024 )
         scene.add( dirLight )
 
-        renderer.setSize( 0.75*60*Math.log(window.innerWidth), 0.75*60*Math.log(window.innerWidth) )
-        mountRef.current.innerHTML = ''
-        mountRef.current.appendChild( renderer.domElement )
-
-        camera.aspect =6/6
+        const container = document.getElementById('3DBox');
+        renderer.setSize(container.offsetWidth, container.offsetHeight);
+        renderer.setPixelRatio( window.devicePixelRatio )
+        container.appendChild(renderer.domElement);
+        camera.aspect =container.offsetWidth/container.offsetHeight
         camera.updateProjectionMatrix()
+
+        mountRef.current.appendChild( renderer.domElement )
 
         const controls = new OrbitControls(camera, renderer.domElement)
         controls.enabled = false
@@ -66,23 +68,13 @@ const Home3D = ({ theme }) => {
 
         window.addEventListener( 'resize', onWindowResize, false )
 
-        function onWindowResize(){
-            renderer.setPixelRatio( window.devicePixelRatio )
-
-            camera.aspect =6/6
-            camera.updateProjectionMatrix()
-
-            renderer.setSize(0.75*60*Math.log(window.innerWidth), 0.75*60*Math.log(window.innerWidth) )
-
-        }
-
         var insidecolor = 0x000000
         var linecolor = 0xFFFFFF
+
 
         if(theme === 'light') {
             insidecolor = 0xFFFFFF
             linecolor = 0x000000
-
         }
 
 
@@ -94,6 +86,15 @@ const Home3D = ({ theme }) => {
         const sphere = new THREE.Mesh( sphereg, material )
         sphere.scale.set(1.1, 1.1, 1.1)
 
+        function onWindowResize(){
+            renderer.setPixelRatio( window.devicePixelRatio )
+            const container = document.getElementById('3DBox');
+            renderer.setSize(container.offsetWidth, container.offsetHeight);
+            camera.aspect =container.offsetWidth/container.offsetHeight
+            camera.updateProjectionMatrix()
+            container.appendChild(renderer.domElement);
+        }
+
         scene.add( sphere )
         scene.add( spheremesh )
 
@@ -102,7 +103,6 @@ const Home3D = ({ theme }) => {
             controls.update()
 
             render()
-
             //stats.update()
         }
 
@@ -110,23 +110,7 @@ const Home3D = ({ theme }) => {
             renderer.render(scene, camera)
         }
 
-        gsap.registerPlugin(ScrollTrigger)
-        gsap.to(camera.position, {
-            scrollTrigger: {
-                trigger: '.pagecontainer',
-                start: 'top top',
-                end: '+=65%%',
-                scrub: true,
-                //markers:true,
-                ease: null,
-            },
-            y: 600,
-            onUpdate: () => {
-                // Update the camera's view
-                camera.updateProjectionMatrix()
-            }
-        })
-
+        
         animate()
     }, [theme])
 

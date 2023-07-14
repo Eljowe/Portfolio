@@ -292,16 +292,26 @@ ul {
 */
 
 .HomeTitle{
-    text-align: right;
+    text-align: left;
     position: fixed;
-    top: 45vh;
-    left: calc(50vw - 250px);
+    top: 20vh;
+    font-size: 4vw;
+    left: calc(10vw);
+    z-index: 6;
+    color: #eff876;
+    font-weight: 900;
+}
+
+#light .HomeTitle {
+    color: #324B4B;
 }
 
 .Home3D {
     position:fixed;
     left: 50vw;
     z-index: 1;
+    height: 120vw;
+    width: 120vw;
 }
 
 
@@ -908,20 +918,22 @@ footer {
     .Home3D {
         align-self: start;
         pointer-events:none;
-        top: 60vh;
-        left: 50%;
-        
-        transform: translate(-50%, -50%);
+        top: -15vh;
+        left: 20%;
+        height: 240vw;
+        width: 240vw;
     }
 
     .HomeTitle {
         align-self: end;
         width: 80vw;
         padding-left: 0;
-        text-align: center;
-        top: 30vh;
+        text-align: left;
+        top: 50vh;
         left: 50vw;
+        font-size: 5vw;
         transform: translate(-50%, -50%);
+        font-weight: 900;
     }
 
     canvas{
