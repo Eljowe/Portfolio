@@ -12,7 +12,6 @@ import speaker_stand from '../STLmodels/speaker_stand.STL'
 import vinylmount from '../STLmodels/vinylmount.STL'
 import ProjectsNavbar from '../components/ProjectsNavbar'
 import Backbutton from '../components/Backbutton'
-import BurgerNavbar from '../components/BurgerNavbar'
 
 const CAD = ({ toggleTheme, theme, projectScrolled, toggleMenu }) => {
     return(

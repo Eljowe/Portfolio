@@ -1,6 +1,4 @@
-import ABOUT from '../project_views/ABOUT'
 import { BsGithub, BsLinkedin } from 'react-icons/bs'
-import { useState, useEffect } from 'react'
 
 const Projects = () => {
 

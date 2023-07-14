@@ -1,6 +1,3 @@
-import ABOUT from '../project_views/ABOUT'
-import { BsGithub, BsLinkedin } from 'react-icons/bs'
-import { useState, useEffect } from 'react'
 import Carousel from 'react-multi-carousel'
 import 'react-multi-carousel/lib/styles.css'
 

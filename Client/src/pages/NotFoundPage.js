@@ -1,6 +1,5 @@
 import Home3D from '../components/Sphere3D'
 import ProjectsNavbar from '../components/ProjectsNavbar'
-import BurgerNavbar from '../components/BurgerNavbar'
 
 const NotFoundPage = ({ toggleTheme, theme, toggleMenu }) => {
     return(
