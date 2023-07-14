@@ -59,7 +59,7 @@ const Home3D = ({ theme }) => {
         controls.enablePan = false
         controls.enableZoom = true
         controls.autoRotate = true
-        controls.autoRotateSpeed = 2
+        controls.autoRotateSpeed = 1
         //scene.userData.controls = controls //this allowed continuing scrolling div when in render view
         controls.minDistance = 400 //50
         controls.maxDistance = 800 //400
