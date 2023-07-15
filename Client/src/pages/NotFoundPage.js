@@ -6,7 +6,9 @@ const NotFoundPage = ({ toggleTheme, theme, toggleMenu }) => {
         <div className="Notfound">
             <ProjectsNavbar toggleTheme={toggleTheme} theme={theme} toggleMenu={toggleMenu} />
             <h1>404: Page not found</h1>
-            <Home3D theme={theme}/>
+            <div id='Error3D' className='Error3D'>
+                <Home3D theme={theme} parentName={'Error3D'}/>
+            </div>
         </div>
     )
 }

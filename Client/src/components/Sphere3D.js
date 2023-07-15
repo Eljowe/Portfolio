@@ -9,7 +9,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
 
 // Home 3D object viewer window. Custom STL-files are supported. For now the object is a sphere
-const Home3D = ({ theme }) => {
+const Home3D = (props) => {
     const mountRef = useRef(null)
     useEffect(() => {
         var scene = new THREE.Scene()
@@ -45,7 +45,7 @@ const Home3D = ({ theme }) => {
         dirLight.shadow.mapSize.set( 1024, 1024 )
         scene.add( dirLight )
 
-        const container = document.getElementById('3DBox')
+        const container = document.getElementById(props.parentName)
         renderer.setSize(container.offsetWidth, container.offsetHeight)
         renderer.setPixelRatio( window.devicePixelRatio )
         container.appendChild(renderer.domElement)
@@ -72,7 +72,7 @@ const Home3D = ({ theme }) => {
         var linecolor = 0xFFFFFF
 
 
-        if(theme === 'light') {
+        if(props.theme === 'light') {
             insidecolor = 0xFFFFFF
             linecolor = 0x000000
         }
@@ -88,7 +88,7 @@ const Home3D = ({ theme }) => {
 
         function onWindowResize(){
             renderer.setPixelRatio( window.devicePixelRatio )
-            const container = document.getElementById('3DBox')
+            const container = document.getElementById(props.parentName)
             renderer.setSize(container.offsetWidth, container.offsetHeight)
             camera.aspect =container.offsetWidth/container.offsetHeight
             camera.updateProjectionMatrix()
@@ -112,10 +112,10 @@ const Home3D = ({ theme }) => {
 
 
         animate()
-    }, [theme])
+    }, [props.theme])
 
     return (
-        <div ref={mountRef} className="ThreeJSWindow">
+        <div ref={mountRef} className={`Three-${props.parentName}`}>
 
         </div>
     )

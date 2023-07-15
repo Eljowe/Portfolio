@@ -314,6 +314,26 @@ ul {
     width: 120vw;
 }
 
+.Home3D2 {
+    position:fixed;
+    left: 10vw;
+    top: 80vh;
+    z-index: 1;
+    height: 40vw;
+    width: 40vw;
+    overflow: hidden;
+}
+
+.Home3D3 {
+    position:fixed;
+    left: 0vw;
+    top: 10vh;
+    z-index: 1;
+    height: 10vw;
+    width: 10vw;
+    overflow: hidden;
+}
+
 
 /* About section */
 
@@ -1073,7 +1093,7 @@ footer {
 
     /* Not found page */
 
-    .Notfound .ThreeJSWindow {
+    .Notfound {
         align-self: start;
     }
 

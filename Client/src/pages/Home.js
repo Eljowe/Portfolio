@@ -162,7 +162,7 @@ const Home = ({ toggleTheme, theme, isScrolled, toggleMenu, menuOpen }) => {
                     <h1>JOEL WICKSTRÖM </h1>
                 </div>
                 <div id='3DBox' className='Home3D'>
-                    <Sphere3D theme={theme}/>
+                    <Sphere3D theme={theme} parentName={'3DBox'} className='SphereCanvas'/>
                 </div>
             </div>
             <About />
