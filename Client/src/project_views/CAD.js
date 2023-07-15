@@ -28,8 +28,8 @@ const CAD = ({ toggleTheme, theme, projectScrolled, toggleMenu }) => {
                     <STLview className="STLview" STL={speaker_stand} position={{ x: -75, z: 0, y: -80 }}/>
                 </div>
                 <p>
-                    Simple speaker stand to direct the sound. I am not fully sure about PLAs (the printing material) audio properties, but so far these have worked well.
-                    The design is simple and optimizes the printing process as the walls are thin.
+                    Simple speaker stand to direct the sound. I am not fully sure about PLA's audio properties, but so far these have worked well.
+                    The design is simple and optimizes the printing process as the walls are thin and no infill is required.
                 </p>
                 <div className="CAD_images">
                     <img className="standimg" src={standR} alt="speaker stand render with wooden block"/>
