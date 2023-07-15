@@ -338,7 +338,7 @@ ul {
 
 .profilepic {
     float: right;
-    margin: 3vh 2vh 2vh 2vh;
+    margin: 3vh 2vh 2vh 4vh;
     max-height: 28vh;
     flex: 1;
     resize:both;
@@ -879,9 +879,10 @@ ul {
 footer {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: left;
     background-color: #282A3A;
     color: white;
+    padding: 0 1em;
 }
 
 #light footer {
@@ -935,7 +936,7 @@ footer {
         text-align: left;
         top: 50vh;
         left: 50vw;
-        font-size: 5vw;
+        font-size: 7vw;
         transform: translate(-50%, -50%);
         font-weight: 900;
     }

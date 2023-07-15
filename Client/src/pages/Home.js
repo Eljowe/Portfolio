@@ -14,13 +14,43 @@ const Home = ({ toggleTheme, theme, isScrolled, toggleMenu, menuOpen }) => {
     const windowSize = useRef([window.innerWidth, window.innerHeight])
 
     window.onload=pageLoaded
-    let tl2 = gsap.timeline({ defaults: { ease: 'rough.inOut', duration: 1.5 } })
+
 
     function pageLoaded() {
+        let tl2 = gsap.timeline({ defaults: { ease: 'rough.inOut', duration: 1.5 } })
+
+        // Define animations using the timeline
         tl2.from('.HomeTitle', { x: -windowSize.current[0]/4, delay:0.15, duration: 1.5, ease: 'power4.inOut', opacity: 0 })
             .from('.Home3D', { x: windowSize.current[0]/4, delay:0.15 , duration: 1.5, ease: 'power4.inOut', opacity: 0 }, '-=1.65')
             .from('.Navbar', { y: -80, delay:0.15 , duration: 1.5, ease: 'power4.inOut' }, '-=1.8')
+            .call(addMouseMoveListener) // Call a function to add mousemove event listener after animations finish
+
+        function addMouseMoveListener() {
+            document.addEventListener('mousemove', mouseMoveFunc)
+        }
+
+        function mouseMoveFunc(e) {
+            if (!isScrolledDown()) {
+                const depth = -15
+                const moveX = (e.pageX - window.innerWidth/10) / depth
+                const moveY = (e.pageY - window.innerHeight/10) / depth
+                gsap.to('.HomeTitle', {
+                    duration: 1,
+                    x: moveX,
+                    y: moveY,
+                    ease: 'slow',
+                    stagger: 0.008,
+                    overwrite: true
+                })
+            }
+        }
+
+        function isScrolledDown() {
+            return window.scrollY > 0
+        }
     }
+
+
 
     useEffect(() => {
         gsap.timeline().to('.Home3D', {
@@ -32,7 +62,7 @@ const Home = ({ toggleTheme, theme, isScrolled, toggleMenu, menuOpen }) => {
                 ease: 'power2.inOut',
                 //invalidateOnRefresh: true
             },
-            opacity: 0, zIndex: 0, x: 200,
+            opacity: 0, zIndex: 0, x: 300,
         }).to('.HomeTitle', {
             scrollTrigger:{
                 trigger: '.pagecontainer',
@@ -44,7 +74,7 @@ const Home = ({ toggleTheme, theme, isScrolled, toggleMenu, menuOpen }) => {
                 //markers: true,
             },
             opacity: 0,
-            x: -200,
+            //x: -200,
         }).fromTo('.Foreword', {
             opacity: 0, x: 500 }, { opacity:1, x: 0,
             scrollTrigger: {
@@ -116,7 +146,6 @@ const Home = ({ toggleTheme, theme, isScrolled, toggleMenu, menuOpen }) => {
                 //markers: true,
             }
         })
-
 
     })
 

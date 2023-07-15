@@ -41,8 +41,8 @@ const Projects3 = () => {
                     itemClass="carousel-item"
                     //focusOnSelect={true}
                 >
-                    <a href="/tapio"  ><div className='ProjectListItem3'><div className='projectPic' id="tapioitem"></div><div className='ProjectListItemText3'><p>A simple static SPA website for the football team I play in. Built with Vite js.</p></div></div></a>
-                    <a href="/RL"  ><div className='ProjectListItem3'><div className='projectPic' id="RLitem">Reinforcement learning</div><div className='ProjectListItemText3'><p>Trying to use reinforcement learning to master a simple 2048-type browser game.</p></div></div></a>
+                    <a href="/tapio"  ><div className='ProjectListItem3'><div className='projectPic' id="tapioitem"></div><div className='ProjectListItemText3'><p>A static SPA website for the football team I play in. Built with Vite js.</p></div></div></a>
+                    <a href="/RL"  ><div className='ProjectListItem3'><div className='projectPic' id="RLitem">Reinforcement learning</div><div className='ProjectListItemText3'><p>Trying to use reinforcement learning to master a 2048-type browser game.</p></div></div></a>
                     <a href="/ticketbot"  ><div className='ProjectListItem3'><div className='projectPic' id="kideitem">Ticket bot</div><div className='ProjectListItemText3'><p>Practicing web automation and REST api usage by creating an automated ticket buying app. Then using Flutter to test mobile development.</p></div></div></a>
                     <a href="/3dDesign"  ><div className='ProjectListItem3'><div className='projectPic' id="caditem">3D Design</div><div className='ProjectListItemText3'><p>Using 3D-designing tools like Solidworks to create random solutions to random problems.</p></div></div></a>
                     <a href="/portfolioproject"  ><div className='ProjectListItem3'><div className='projectPic' id="portfolioitem">Portfolio</div><div className='ProjectListItemText3'><p>How I built this website. What tools I used and why. What I learned.</p></div></div></a>
