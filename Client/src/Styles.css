@@ -297,7 +297,7 @@ ul {
     top: 35vh;
     font-size: calc(30px + ((600vw - 320px) / 580));
     left: calc(10vw);
-    z-index: 5;
+    z-index: 2;
     color: #eff876;
     font-weight: 900;
 }
@@ -458,7 +458,8 @@ ul {
     max-width: 25vw;
     color: white;
     border-radius: 1vh;
-    box-shadow: 1px 1px 10px 0px rgba(0,0,0,0.88)
+    box-shadow: 1px 1px 10px 0px rgba(0,0,0,0.88);
+    z-index: 4;
 }
 
 #portfolioitem {
@@ -570,6 +571,7 @@ ul {
   }
 
 /* Projects 3 */
+
 
 .ProjectListItem3 {
     height: 50vh;
