@@ -74,7 +74,8 @@ const Home = ({ toggleTheme, theme, isScrolled, toggleMenu, menuOpen }) => {
                 //markers: true,
             },
             opacity: 0,
-            //x: -200,
+            zIndex: 0,
+            x: -200,
         }).fromTo('.Foreword', {
             opacity: 0, x: 500 }, { opacity:1, x: 0,
             scrollTrigger: {

@@ -401,7 +401,6 @@ ul {
 
 #projects {
     padding: 70px 4vh 4vh 4vh;
-    height: 100vh;
     text-align: left;
     overflow: hidden;
     justify-content: center;
@@ -424,6 +423,8 @@ ul {
     text-align: justify;
     max-width: 140vh;
     justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 
@@ -572,23 +573,28 @@ ul {
 
 /* Projects 3 */
 
+.ProjectList a {
+    margin: 10px;
+}
 
 .ProjectListItem3 {
-    height: 50vh;
-    width: auto;
+    height: 30vh;
+    width: 30vw;
     object-fit: cover;
     font-size: 1.2rem;
     color: white;
-    border-radius: 1vh;
-    box-shadow: 1px 1px 10px 0px rgba(0,0,0,0.88);
     overflow: hidden;
     word-break: keep-all;
     text-align: center;
     vertical-align: middle;
     font-size: 4vh;
-    margin: 10px;
-    max-width: 600px;
-    background-color: #1c1c20;
+    margin: 1px;
+    max-width: 400px;
+    min-width: 250px;
+    outline: rgb(255, 255, 255);
+    outline-style: solid;
+    outline-width: 1px;
+    border-radius: 5px;
 }
 
 .carousel-item {
@@ -900,12 +906,6 @@ footer {
     }
 }
 
-@media all and (max-width: 900px) {
-    .ProjectListItem3 {
-        margin: 20px auto;
-    }
-}
-
 @media all and (max-width: 500px) {
 
     /* Navbar */
@@ -1001,7 +1001,9 @@ footer {
     }
 
     .ProjectListItem3 {
-        height: 60vh;
+        height: 50vh;
+        width:auto;
+        margin: 20px 1px;
     }
 
     .ProjectListItem3 p {
