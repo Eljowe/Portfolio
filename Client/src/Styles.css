@@ -1003,7 +1003,11 @@ footer {
     .ProjectListItem3 {
         height: 50vh;
         width:auto;
-        margin: 20px 1px;
+        margin: 10px 1px;
+    }
+
+    .ProjectList a {
+        margin: 0px 10px;
     }
 
     .ProjectListItem3 p {
