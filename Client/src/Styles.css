@@ -447,8 +447,6 @@ ul {
     flex-wrap: wrap;
 }
 
-
-
 #projects h1 {
     margin: 5vh auto 0 auto;
     padding-bottom: 4vh;
@@ -462,25 +460,6 @@ ul {
     text-align: justify;
     max-width: 110vh;
     padding: 4vh 0;
-}
-
-.ProjectListItem {
-    overflow-y: hidden;
-    display: inline-block;
-    margin: 0 2vh 2vh 0;
-    font-size: 2vh;
-    word-break: keep-all;
-    text-align: center;
-    vertical-align: middle;
-    line-height: 11vw;
-    height: 11vw;
-    min-height: 10vh;
-    width: 47%;
-    max-width: 25vw;
-    color: white;
-    border-radius: 1vh;
-    box-shadow: 1px 1px 10px 0px rgba(0,0,0,0.88);
-    z-index: 4;
 }
 
 #portfolioitem {
@@ -526,79 +505,14 @@ ul {
     margin: 2vh 1rem;
 }
 
-/* Projects2 */
-
-#projects2 h1 {
-    padding: 8vh 4vh;
-    text-align: justify;
-    max-width: 110vh;
-    position: absolute;
-}
-
-.ProjectListItem2 {
-    height: 55vh;
-    width: auto;
-    object-fit: cover;
-    font-size: 2vh;
-
-    color: white;
-    border-radius: 3vh;
-    box-shadow: 1px 1px 10px 0px rgba(0,0,0,0.88);
-
-    font-size: 5vh;
-    word-break: keep-all;
-    text-align: center;
-    vertical-align: middle;
-    line-height: 55vh;
-}
-
-#dark #projects2 {
-    background-color: #282A3A;
-    color: white;
-}
-
-#light #projects2 {
-    background-color: #324B4B;
-    color: white;
-}
-
-
-
-#projects2 {
-    height: 100vh;
-  overflow-x: unset;
-  display: flex;
-  left: 0;
-  background: var(--text-color);
-  color: var(--bg-color);
-}
-
-#projects2 * {
-    overflow-x: unset;
-    text-decoration: none;
-}
-
-.ProjectList2 {
-    height: 100vh;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  padding: 50px 10vw;
-}
-
-.ProjectList2 > * {
-    min-width: 60vw;
-    padding: 0 5vw;
-  }
-
 /* Projects 3 */
 
 .ProjectList a {
     margin: 10px;
 }
 
-.ProjectListItem3 {
-    height: 30vh;
+.ProjectListItem {
+    height: calc(400px - 10vw);
     width: 30vw;
     object-fit: cover;
     font-size: 1.2rem;
@@ -635,9 +549,7 @@ ul {
     padding: 10px;
 }
 
-
-
-#projects .ProjectListItemText3 p {
+#projects .ProjectListItemText p {
     padding: 1em;
     text-align: left;
 }
@@ -989,29 +901,6 @@ footer {
     #projects {
         padding: 8vh 4vh 4vh 4vh;
     }
-    .ProjectListItem {
-        line-height: 18.5vw;
-        height: 18.5vw;
-        width: 37vw;
-        max-width: unset;
-        margin: 1vh;
-    }
-
-    .ProjectListItem2 {
-        height: 18.5vh;
-        line-height: 18.5vh;
-        width: auto;
-        object-fit: cover;
-        font-size: 2.5vh;
-    }
-
-    #projects2 h1 {
-        padding: 10vh 4vh;
-        text-align: justify;
-        max-width: 110vh;
-        position: absolute;
-        left: 0;
-    }
 
     #projects h1 {
         margin: 2vh auto 0 auto;
@@ -1020,7 +909,7 @@ footer {
         max-width: 110vh;
     }
 
-    .ProjectListItem3 {
+    .ProjectListItem {
         height: 50vh;
         width:auto;
         margin: 10px 1px;
@@ -1030,7 +919,7 @@ footer {
         margin: 0px 10px;
     }
 
-    .ProjectListItem3 p {
+    .ProjectListItem p {
         font-size: 1.2rem;
     }
 

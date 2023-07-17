@@ -3,7 +3,7 @@ import Sphere3D from '../components/Sphere3D'
 import About from '../sections/About'
 import Resume from '../sections/Resume'
 import { gsap } from 'gsap'
-import Projects3 from '../sections/Projects3'
+import Projects from '../sections/Projects'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import BurgerNavbar from '../components/BurgerNavbar'
 import NavigationScreen from '../components/NavigationScreen'
@@ -110,8 +110,8 @@ const Home = ({ toggleTheme, theme, isScrolled, toggleMenu, menuOpen }) => {
             opacity: 0, x: 500 }, { opacity:1, x: 0,
             scrollTrigger: {
                 trigger: '#about',
-                start: '+=0%',
-                end: '+=60%',
+                start: 'top top',
+                end: '+=70%',
                 scrub: true,
                 ease: 'power2.inOut',
                 //markers: true,
@@ -120,8 +120,8 @@ const Home = ({ toggleTheme, theme, isScrolled, toggleMenu, menuOpen }) => {
             opacity: 0, x: -500 }, { opacity:1, x: 0,
             scrollTrigger: {
                 trigger: '#about',
-                start: '+=0%',
-                end: '+=60%',
+                start: 'top top',
+                end: '+=70%',
                 scrub: true,
                 ease: 'power2.inOut',
                 //markers: true,
@@ -167,7 +167,7 @@ const Home = ({ toggleTheme, theme, isScrolled, toggleMenu, menuOpen }) => {
             </div>
             <About />
             <div className='spacer layer1'></div>
-            <Projects3/>
+            <Projects/>
             <div className='spacer layer2'></div>
             <Resume />
         </div>
