@@ -512,7 +512,7 @@ ul {
 }
 
 .ProjectListItem {
-    height: calc(400px - 10vw);
+    height: calc(35vh);
     width: 30vw;
     object-fit: cover;
     font-size: 1.2rem;
