@@ -100,8 +100,8 @@ h1 {
 
 .arrow svg {
     position: absolute;
-    top: 18%;
-    right: 18%;
+    top: 15%;
+    right: 15%;
 }
 
 
@@ -362,7 +362,7 @@ ul {
     max-height: 28vh;
     flex: 1;
     resize:both;
-    border-radius: 1vh;
+    border-radius: 5px;
 }
 
 #about h1, #about h3 {
@@ -861,6 +861,7 @@ footer {
         left: 20%;
         height: 240vw;
         width: 240vw;
+        opacity: 0.6;
     }
 
     .HomeTitle {
