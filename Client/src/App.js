@@ -88,17 +88,24 @@ function App() {
         if (gsapMenu) {
             gsap.timeline().to('.NavigationScreen', {
                 duration: 0.3,
-                x: '-50%',
+                x: '-100%',
                 ease: 'power2.inOut'
             })} else {
             gsap.timeline().to('.NavigationScreen', {
                 duration: 0.3,
-                x: '50vw',
+                x: '100vw',
                 ease: 'power2.inOut',
             })
         }
 
     }
+    useEffect(() => {
+        if (menuOpen === 'open') {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = 'unset';
+        }
+    }, [menuOpen]);
 
     return (
         <ThemeContext.Provider value={{ theme, toggleTheme }}>
