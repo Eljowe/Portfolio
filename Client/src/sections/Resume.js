@@ -28,7 +28,7 @@ const Resume = () => {
                         <li className="educationItem">Graduated in 2018</li>
                     </ul>
                     <h3 className="resumehead">Experience</h3>
-                    <p className="resumetime">May 2022 - Aug. 2022</p>
+                    <p className="resumetime">May 2022 - Aug. 2022 & May 2023 - Aug. 2023</p>
                     <h3 className="subtitle">Vaisala Oyj</h3>
                     <ul className="educationlist">
                         <li className="educationItem">Test engineer trainee at Vaisala instrument factory</li>

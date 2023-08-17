@@ -502,7 +502,10 @@ ul {
 
 .Socialicon {
     color: white;
-    margin: 2vh 1rem;
+    margin: 0.8rem 1rem;
+    display: flex;
+    justify-items: center;
+    align-items: center;
 }
 
 /* Projects 3 */
@@ -525,7 +528,7 @@ ul {
     margin: 5px;
     max-width: 400px;
     min-width: 300px;
-    outline: rgb(76, 76, 76);
+    outline: rgb(170, 170, 170);
     outline-style: solid;
     outline-width: 1px;
     border-radius: 5px;
@@ -820,7 +823,7 @@ ul {
 footer {
     display: flex;
     flex-direction: row;
-    justify-content: left;
+    justify-content: center;
     background-color: #282A3A;
     color: white;
     padding: 0 1em;
