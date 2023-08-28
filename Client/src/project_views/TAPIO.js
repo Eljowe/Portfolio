@@ -18,6 +18,9 @@ const TAPIO = ({ toggleTheme, theme, projectScrolled, toggleMenu }) => {
                     I wanted to practice my frontend design skills and to try some new technologies.
                     I came up with an idea to design a website for my sunday league football team.
                 </p>
+                <p>
+                    The Main focus of this quick project was to test my Vite.js boilerplate that should have built in fast deploy to Fly.io and small buildpack size. 
+                </p>
                 <Backbutton />
             </div>
         </div>
