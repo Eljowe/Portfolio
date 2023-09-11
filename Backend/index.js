@@ -31,6 +31,13 @@ app.get('/api/download', (req, res) => {
   res.download(filePath, fileName);    
 })
 
+app.get('/api/download1', (req, res) => {
+  var filePath = "./public/kidebotti.apk";
+  var fileName = "kidebotti.apk";
+  console.log('download requested for android')
+  res.download(filePath, fileName);    
+})
+
 app.get('/api/ios', (req, res) => {
   var filePath = "./public/runner.zip";
   var fileName = "runner.zip";
