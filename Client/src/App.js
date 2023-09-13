@@ -15,6 +15,7 @@ import KIDE from './project_views/KIDE'
 import RLAI from './project_views/RLAI'
 import WEBSITE from './project_views/WEBSITE'
 import TAPIO from './project_views/TAPIO'
+import KALLIO from './project_views/KALLIO'
 import { gsap } from 'gsap'
 import { BsGithub, BsLinkedin } from 'react-icons/bs'
 
@@ -120,6 +121,7 @@ function App() {
                         <Route path="/3dDesign" element={<CAD toggleTheme={toggleTheme} theme={theme} projectScrolled={projectScrolled} toggleMenu={toggleMenu} menuOpen={menuOpen} />} />
                         <Route path="/film" element={<FILM toggleTheme={toggleTheme} theme={theme} projectScrolled={projectScrolled} toggleMenu={toggleMenu} menuOpen={menuOpen} />} />
                         <Route path="/tapio" element={<TAPIO toggleTheme={toggleTheme} theme={theme} projectScrolled={projectScrolled} toggleMenu={toggleMenu} menuOpen={menuOpen} />} />
+                        <Route path="/kalliokierrokselle" element={<KALLIO toggleTheme={toggleTheme} theme={theme} projectScrolled={projectScrolled} toggleMenu={toggleMenu} menuOpen={menuOpen} />} />
                     </Routes>
                 </Router>
                 {isScrolled && <h1><ScrollTopArrow/></h1>}
