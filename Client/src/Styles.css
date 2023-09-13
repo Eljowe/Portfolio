@@ -326,6 +326,14 @@ ul {
     width: 120vw;
 }
 
+.Error3D {
+        position: relative;
+        pointer-events:none;
+        height: 50%;
+        width: 100%;
+        opacity: 0.6;
+}
+
 .Home3D2 {
     position:fixed;
     left: 10vw;

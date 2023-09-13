@@ -1,5 +1,6 @@
-import Home3D from '../components/Sphere3D'
+import Sphere3D from '../components/Sphere3D'
 import ProjectsNavbar from '../components/ProjectsNavbar'
+
 
 const NotFoundPage = ({ toggleTheme, theme, toggleMenu }) => {
     return(
@@ -7,7 +8,7 @@ const NotFoundPage = ({ toggleTheme, theme, toggleMenu }) => {
             <ProjectsNavbar toggleTheme={toggleTheme} theme={theme} toggleMenu={toggleMenu} />
             <h1>404: Page not found</h1>
             <div id='Error3D' className='Error3D'>
-                <Home3D theme={theme} parentName={'Error3D'}/>
+                <Sphere3D theme={theme} parentName={'Error3D'} className='SphereCanvas'/>
             </div>
         </div>
     )
