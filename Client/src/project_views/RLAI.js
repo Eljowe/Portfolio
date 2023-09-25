@@ -7,7 +7,8 @@ import Backbutton from '../components/Backbutton'
 import BurgerNavbar from '../components/BurgerNavbar'
 
 const RLAI = ({ toggleTheme, theme, projectScrolled, toggleMenu }) => {
-    const code = `import gym
+    const code = `
+import gym
 from gym import spaces
 
 class CustomEnv(gym.Env):
